@@ -1,0 +1,356 @@
+dbug: 18.02.2021 03:50:11.710 CoreEventId.ShadowPropertyCreated[10600] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      The property 'AnswerEntityId.AnswerAttachmentEntity' was created in shadow state because there are no eligible CLR members with a matching name.
+dbug: 18.02.2021 03:50:11.711 CoreEventId.ShadowPropertyCreated[10600] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      The property 'QuestionEntityId.AnswerEntity' was created in shadow state because there are no eligible CLR members with a matching name.
+info: 18.02.2021 03:50:11.819 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'QuestionaireDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+dbug: 18.02.2021 03:50:11.875 CoreEventId.QueryCompilationStarting[10111] (Microsoft.EntityFrameworkCore.Query) 
+      Compiling query expression: 
+      'DbSet<AnswerEntity>()
+          .FirstOrDefault(u => u.Id.Equals(__id_0))'
+dbug: 18.02.2021 03:50:12.039 CoreEventId.QueryExecutionPlanned[10107] (Microsoft.EntityFrameworkCore.Query) 
+      Generated query execution expression: 
+      'queryContext => new SingleQueryingEnumerable<AnswerEntity>(
+          (RelationalQueryContext)queryContext, 
+          RelationalCommandCache.SelectExpression(
+              Projection Mapping:
+                  EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: AnswerEntity.Id (Guid) Required PK Index AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: AnswerEntity.QuestionEntityId (no field, Nullable<Guid>) Shadow FK Index, 1], [Property: AnswerEntity.Text (string), 2], }
+              SELECT TOP(1) a.Id, a.QuestionEntityId, a.Text
+              FROM Answers AS a
+              WHERE a.Id == @__id_0), 
+          Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, AnswerEntity>, 
+          UsabilityFactoryExamQuiz.Model.EF.QuestionaireDBContext, 
+          False, 
+          False
+      )
+          .SingleOrDefault()'
+dbug: 18.02.2021 03:50:12.088 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteReader'.
+dbug: 18.02.2021 03:50:12.092 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteReader' (22ms).
+dbug: 18.02.2021 03:50:12.106 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'UsabilityFactoryExamQuiz' on server 'localhost\SQLEXPRESS'.
+dbug: 18.02.2021 03:50:12.288 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'UsabilityFactoryExamQuiz' on server 'localhost\SQLEXPRESS'.
+dbug: 18.02.2021 03:50:12.294 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [a].[Id], [a].[QuestionEntityId], [a].[Text]
+      FROM [Answers] AS [a]
+      WHERE [a].[Id] = @__id_0
+info: 18.02.2021 03:50:12.325 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (33ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [a].[Id], [a].[QuestionEntityId], [a].[Text]
+      FROM [Answers] AS [a]
+      WHERE [a].[Id] = @__id_0
+dbug: 18.02.2021 03:50:12.332 RelationalEventId.DataReaderDisposing[20300] (Microsoft.EntityFrameworkCore.Database.Command) 
+      A data reader was disposed.
+dbug: 18.02.2021 03:50:12.334 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'UsabilityFactoryExamQuiz' on server 'localhost\SQLEXPRESS'.
+dbug: 18.02.2021 03:50:12.338 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'UsabilityFactoryExamQuiz' on server 'localhost\SQLEXPRESS'.
+dbug: 18.02.2021 03:50:19.738 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'QuestionaireDBContext' disposed.
+info: 18.02.2021 03:50:31.846 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'QuestionaireDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+dbug: 18.02.2021 03:50:31.848 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteReader'.
+dbug: 18.02.2021 03:50:31.848 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteReader' (0ms).
+dbug: 18.02.2021 03:50:31.848 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'UsabilityFactoryExamQuiz' on server 'localhost\SQLEXPRESS'.
+dbug: 18.02.2021 03:50:31.849 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'UsabilityFactoryExamQuiz' on server 'localhost\SQLEXPRESS'.
+dbug: 18.02.2021 03:50:31.850 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [a].[Id], [a].[QuestionEntityId], [a].[Text]
+      FROM [Answers] AS [a]
+      WHERE [a].[Id] = @__id_0
+info: 18.02.2021 03:50:31.851 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [a].[Id], [a].[QuestionEntityId], [a].[Text]
+      FROM [Answers] AS [a]
+      WHERE [a].[Id] = @__id_0
+dbug: 18.02.2021 03:50:31.851 RelationalEventId.DataReaderDisposing[20300] (Microsoft.EntityFrameworkCore.Database.Command) 
+      A data reader was disposed.
+dbug: 18.02.2021 03:50:31.852 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'UsabilityFactoryExamQuiz' on server 'localhost\SQLEXPRESS'.
+dbug: 18.02.2021 03:50:31.852 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'UsabilityFactoryExamQuiz' on server 'localhost\SQLEXPRESS'.
+dbug: 18.02.2021 03:50:31.871 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'QuestionaireDBContext' disposed.
+dbug: 18.02.2021 03:56:33.950 CoreEventId.ShadowPropertyCreated[10600] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      The property 'AnswerEntityId.AnswerAttachmentEntity' was created in shadow state because there are no eligible CLR members with a matching name.
+dbug: 18.02.2021 03:56:33.951 CoreEventId.ShadowPropertyCreated[10600] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      The property 'QuestionEntityId.AnswerEntity' was created in shadow state because there are no eligible CLR members with a matching name.
+info: 18.02.2021 03:56:34.075 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'QuestionaireDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+dbug: 18.02.2021 03:56:34.132 CoreEventId.QueryCompilationStarting[10111] (Microsoft.EntityFrameworkCore.Query) 
+      Compiling query expression: 
+      'DbSet<AnswerEntity>()
+          .FirstOrDefault(u => u.Id.Equals(__id_0))'
+dbug: 18.02.2021 03:56:34.320 CoreEventId.QueryExecutionPlanned[10107] (Microsoft.EntityFrameworkCore.Query) 
+      Generated query execution expression: 
+      'queryContext => new SingleQueryingEnumerable<AnswerEntity>(
+          (RelationalQueryContext)queryContext, 
+          RelationalCommandCache.SelectExpression(
+              Projection Mapping:
+                  EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: AnswerEntity.Id (Guid) Required PK Index AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: AnswerEntity.QuestionEntityId (no field, Nullable<Guid>) Shadow FK Index, 1], [Property: AnswerEntity.Text (string), 2], }
+              SELECT TOP(1) a.Id, a.QuestionEntityId, a.Text
+              FROM Answers AS a
+              WHERE a.Id == @__id_0), 
+          Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, AnswerEntity>, 
+          UsabilityFactoryExamQuiz.Model.EF.QuestionaireDBContext, 
+          False, 
+          False
+      )
+          .SingleOrDefault()'
+dbug: 18.02.2021 03:56:34.369 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteReader'.
+dbug: 18.02.2021 03:56:34.374 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteReader' (24ms).
+dbug: 18.02.2021 03:56:34.391 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'UsabilityFactoryExamQuiz' on server 'localhost\SQLEXPRESS'.
+fail: 18.02.2021 03:56:46.628 RelationalEventId.ConnectionError[20004] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      An error occurred using the connection to database 'UsabilityFactoryExamQuiz' on server 'localhost\SQLEXPRESS'.
+fail: 18.02.2021 03:56:46.675 CoreEventId.QueryIterationFailed[10100] (Microsoft.EntityFrameworkCore.Query) 
+      An exception occurred while iterating over the results of a query for context type 'UsabilityFactoryExamQuiz.Model.EF.QuestionaireDBContext'.
+      Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "UsabilityFactoryExamQuiz" requested by the login. The login failed.
+      Login failed for user 'VLADIMIR-GORUNO\Vladimir'.
+         at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+         at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+         at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+         at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+         at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+         at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+         at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+         at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+         at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+         at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+         at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+         at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+         at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+         at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+         at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+         at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+         at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+         at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+         at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+         at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+         at Microsoft.Data.SqlClient.SqlConnection.Open()
+         at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+         at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+         at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+         at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+         at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+         at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+         at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+      ClientConnectionId:cebd4d63-dfdf-41a9-8ad3-28be6efe478c
+      Error Number:4060,State:1,Class:11
+dbug: 18.02.2021 03:56:46.878 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'QuestionaireDBContext' disposed.
+dbug: 18.02.2021 04:04:06.782 CoreEventId.ShadowPropertyCreated[10600] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      The property 'AnswerEntityId.AnswerAttachmentEntity' was created in shadow state because there are no eligible CLR members with a matching name.
+dbug: 18.02.2021 04:04:06.782 CoreEventId.ShadowPropertyCreated[10600] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      The property 'QuestionEntityId.AnswerEntity' was created in shadow state because there are no eligible CLR members with a matching name.
+info: 18.02.2021 04:04:06.907 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'QuestionaireDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+dbug: 18.02.2021 04:04:06.963 CoreEventId.QueryCompilationStarting[10111] (Microsoft.EntityFrameworkCore.Query) 
+      Compiling query expression: 
+      'DbSet<AnswerEntity>()
+          .FirstOrDefault(u => u.Id.Equals(__id_0))'
+dbug: 18.02.2021 04:04:07.152 CoreEventId.QueryExecutionPlanned[10107] (Microsoft.EntityFrameworkCore.Query) 
+      Generated query execution expression: 
+      'queryContext => new SingleQueryingEnumerable<AnswerEntity>(
+          (RelationalQueryContext)queryContext, 
+          RelationalCommandCache.SelectExpression(
+              Projection Mapping:
+                  EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: AnswerEntity.Id (Guid) Required PK Index AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: AnswerEntity.QuestionEntityId (no field, Nullable<Guid>) Shadow FK Index, 1], [Property: AnswerEntity.Text (string), 2], }
+              SELECT TOP(1) a.Id, a.QuestionEntityId, a.Text
+              FROM Answers AS a
+              WHERE a.Id == @__id_0), 
+          Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, AnswerEntity>, 
+          UsabilityFactoryExamQuiz.Model.EF.QuestionaireDBContext, 
+          False, 
+          False
+      )
+          .SingleOrDefault()'
+dbug: 18.02.2021 04:04:07.202 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteReader'.
+dbug: 18.02.2021 04:04:07.207 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteReader' (24ms).
+dbug: 18.02.2021 04:04:07.224 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'UsabilityFactoryExamQuiz' on server 'localhost\SQLEXPRESS'.
+fail: 18.02.2021 04:04:19.462 RelationalEventId.ConnectionError[20004] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      An error occurred using the connection to database 'UsabilityFactoryExamQuiz' on server 'localhost\SQLEXPRESS'.
+fail: 18.02.2021 04:04:19.508 CoreEventId.QueryIterationFailed[10100] (Microsoft.EntityFrameworkCore.Query) 
+      An exception occurred while iterating over the results of a query for context type 'UsabilityFactoryExamQuiz.Model.EF.QuestionaireDBContext'.
+      Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot open database "UsabilityFactoryExamQuiz" requested by the login. The login failed.
+      Login failed for user 'VLADIMIR-GORUNO\Vladimir'.
+         at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+         at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+         at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+         at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+         at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+         at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+         at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+         at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+         at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+         at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+         at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+         at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+         at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+         at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+         at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+         at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+         at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+         at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+         at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+         at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+         at Microsoft.Data.SqlClient.SqlConnection.Open()
+         at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+         at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+         at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+         at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+         at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+         at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+         at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+      ClientConnectionId:11e1ff3c-f273-4cd6-b28e-d5dd76df3842
+      Error Number:4060,State:1,Class:11
+dbug: 18.02.2021 04:04:19.659 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'QuestionaireDBContext' disposed.
+dbug: 18.02.2021 04:05:14.810 CoreEventId.ShadowPropertyCreated[10600] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      The property 'AnswerEntityId.AnswerAttachmentEntity' was created in shadow state because there are no eligible CLR members with a matching name.
+dbug: 18.02.2021 04:05:14.811 CoreEventId.ShadowPropertyCreated[10600] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      The property 'QuestionEntityId.AnswerEntity' was created in shadow state because there are no eligible CLR members with a matching name.
+info: 18.02.2021 04:05:14.933 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'QuestionaireDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+dbug: 18.02.2021 04:05:14.989 CoreEventId.QueryCompilationStarting[10111] (Microsoft.EntityFrameworkCore.Query) 
+      Compiling query expression: 
+      'DbSet<AnswerEntity>()
+          .FirstOrDefault(u => u.Id.Equals(__id_0))'
+dbug: 18.02.2021 04:05:15.180 CoreEventId.QueryExecutionPlanned[10107] (Microsoft.EntityFrameworkCore.Query) 
+      Generated query execution expression: 
+      'queryContext => new SingleQueryingEnumerable<AnswerEntity>(
+          (RelationalQueryContext)queryContext, 
+          RelationalCommandCache.SelectExpression(
+              Projection Mapping:
+                  EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: AnswerEntity.Id (Guid) Required PK Index AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: AnswerEntity.QuestionEntityId (no field, Nullable<Guid>) Shadow FK Index, 1], [Property: AnswerEntity.Text (string), 2], }
+              SELECT TOP(1) a.Id, a.QuestionEntityId, a.Text
+              FROM Answers AS a
+              WHERE a.Id == @__id_0), 
+          Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, AnswerEntity>, 
+          UsabilityFactoryExamQuiz.Model.EF.QuestionaireDBContext, 
+          False, 
+          False
+      )
+          .SingleOrDefault()'
+dbug: 18.02.2021 04:05:15.231 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteReader'.
+dbug: 18.02.2021 04:05:15.236 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteReader' (24ms).
+dbug: 18.02.2021 04:05:15.252 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'UsabilityFactoryExamQuiz' on server 'localhost\SQLEXPRESS'.
+dbug: 18.02.2021 04:05:16.445 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'UsabilityFactoryExamQuiz' on server 'localhost\SQLEXPRESS'.
+dbug: 18.02.2021 04:05:16.451 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [a].[Id], [a].[QuestionEntityId], [a].[Text]
+      FROM [Answers] AS [a]
+      WHERE [a].[Id] = @__id_0
+info: 18.02.2021 04:05:16.488 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (39ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [a].[Id], [a].[QuestionEntityId], [a].[Text]
+      FROM [Answers] AS [a]
+      WHERE [a].[Id] = @__id_0
+dbug: 18.02.2021 04:05:16.497 RelationalEventId.DataReaderDisposing[20300] (Microsoft.EntityFrameworkCore.Database.Command) 
+      A data reader was disposed.
+dbug: 18.02.2021 04:05:16.499 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'UsabilityFactoryExamQuiz' on server 'localhost\SQLEXPRESS'.
+dbug: 18.02.2021 04:05:16.505 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'UsabilityFactoryExamQuiz' on server 'localhost\SQLEXPRESS'.
+dbug: 18.02.2021 04:05:16.615 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'QuestionaireDBContext' disposed.
+info: 18.02.2021 04:05:20.292 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'QuestionaireDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+dbug: 18.02.2021 04:05:20.295 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteReader'.
+dbug: 18.02.2021 04:05:20.295 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteReader' (0ms).
+dbug: 18.02.2021 04:05:20.295 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'UsabilityFactoryExamQuiz' on server 'localhost\SQLEXPRESS'.
+dbug: 18.02.2021 04:05:20.296 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'UsabilityFactoryExamQuiz' on server 'localhost\SQLEXPRESS'.
+dbug: 18.02.2021 04:05:20.296 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [a].[Id], [a].[QuestionEntityId], [a].[Text]
+      FROM [Answers] AS [a]
+      WHERE [a].[Id] = @__id_0
+info: 18.02.2021 04:05:20.298 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [a].[Id], [a].[QuestionEntityId], [a].[Text]
+      FROM [Answers] AS [a]
+      WHERE [a].[Id] = @__id_0
+dbug: 18.02.2021 04:05:20.298 RelationalEventId.DataReaderDisposing[20300] (Microsoft.EntityFrameworkCore.Database.Command) 
+      A data reader was disposed.
+dbug: 18.02.2021 04:05:20.298 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'UsabilityFactoryExamQuiz' on server 'localhost\SQLEXPRESS'.
+dbug: 18.02.2021 04:05:20.298 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'UsabilityFactoryExamQuiz' on server 'localhost\SQLEXPRESS'.
+dbug: 18.02.2021 04:05:20.331 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'QuestionaireDBContext' disposed.
+info: 18.02.2021 04:05:29.485 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'QuestionaireDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+dbug: 18.02.2021 04:05:29.487 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteReader'.
+dbug: 18.02.2021 04:05:29.487 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteReader' (0ms).
+dbug: 18.02.2021 04:05:29.487 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'UsabilityFactoryExamQuiz' on server 'localhost\SQLEXPRESS'.
+dbug: 18.02.2021 04:05:29.487 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'UsabilityFactoryExamQuiz' on server 'localhost\SQLEXPRESS'.
+dbug: 18.02.2021 04:05:29.487 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [a].[Id], [a].[QuestionEntityId], [a].[Text]
+      FROM [Answers] AS [a]
+      WHERE [a].[Id] = @__id_0
+info: 18.02.2021 04:05:29.488 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [a].[Id], [a].[QuestionEntityId], [a].[Text]
+      FROM [Answers] AS [a]
+      WHERE [a].[Id] = @__id_0
+dbug: 18.02.2021 04:05:29.488 RelationalEventId.DataReaderDisposing[20300] (Microsoft.EntityFrameworkCore.Database.Command) 
+      A data reader was disposed.
+dbug: 18.02.2021 04:05:29.488 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'UsabilityFactoryExamQuiz' on server 'localhost\SQLEXPRESS'.
+dbug: 18.02.2021 04:05:29.488 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'UsabilityFactoryExamQuiz' on server 'localhost\SQLEXPRESS'.
+dbug: 18.02.2021 04:05:29.525 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'QuestionaireDBContext' disposed.
+info: 18.02.2021 04:05:32.669 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'QuestionaireDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+dbug: 18.02.2021 04:05:32.670 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteReader'.
+dbug: 18.02.2021 04:05:32.670 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteReader' (0ms).
+dbug: 18.02.2021 04:05:32.671 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'UsabilityFactoryExamQuiz' on server 'localhost\SQLEXPRESS'.
+dbug: 18.02.2021 04:05:32.671 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'UsabilityFactoryExamQuiz' on server 'localhost\SQLEXPRESS'.
+dbug: 18.02.2021 04:05:32.671 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [a].[Id], [a].[QuestionEntityId], [a].[Text]
+      FROM [Answers] AS [a]
+      WHERE [a].[Id] = @__id_0
+info: 18.02.2021 04:05:32.672 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [a].[Id], [a].[QuestionEntityId], [a].[Text]
+      FROM [Answers] AS [a]
+      WHERE [a].[Id] = @__id_0
+dbug: 18.02.2021 04:05:32.672 RelationalEventId.DataReaderDisposing[20300] (Microsoft.EntityFrameworkCore.Database.Command) 
+      A data reader was disposed.
+dbug: 18.02.2021 04:05:32.672 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'UsabilityFactoryExamQuiz' on server 'localhost\SQLEXPRESS'.
+dbug: 18.02.2021 04:05:32.672 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'UsabilityFactoryExamQuiz' on server 'localhost\SQLEXPRESS'.
+dbug: 18.02.2021 04:05:32.700 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'QuestionaireDBContext' disposed.
