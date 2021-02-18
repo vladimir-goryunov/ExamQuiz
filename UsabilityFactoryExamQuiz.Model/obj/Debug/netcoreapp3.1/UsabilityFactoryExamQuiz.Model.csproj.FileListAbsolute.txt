@@ -1,0 +1,34 @@
+D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\Source Code\UsabilityFactoryExamQuiz\UsabilityFactoryExamQuiz.Model\bin\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.deps.json
+D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\Source Code\UsabilityFactoryExamQuiz\UsabilityFactoryExamQuiz.Model\bin\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.dll
+D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\Source Code\UsabilityFactoryExamQuiz\UsabilityFactoryExamQuiz.Model\bin\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.pdb
+D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\Source Code\UsabilityFactoryExamQuiz\UsabilityFactoryExamQuiz.Model\obj\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.AssemblyInfoInputs.cache
+D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\Source Code\UsabilityFactoryExamQuiz\UsabilityFactoryExamQuiz.Model\obj\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.AssemblyInfo.cs
+D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\Source Code\UsabilityFactoryExamQuiz\UsabilityFactoryExamQuiz.Model\obj\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.csproj.CoreCompileInputs.cache
+D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\Source Code\UsabilityFactoryExamQuiz\UsabilityFactoryExamQuiz.Model\obj\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.dll
+D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\Source Code\UsabilityFactoryExamQuiz\UsabilityFactoryExamQuiz.Model\obj\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.pdb
+D:\_Net.TestTask\UsabilityFactoryExamQuiz\UsabilityFactoryExamQuiz.Model\bin\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.deps.json
+D:\_Net.TestTask\UsabilityFactoryExamQuiz\UsabilityFactoryExamQuiz.Model\bin\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.dll
+D:\_Net.TestTask\UsabilityFactoryExamQuiz\UsabilityFactoryExamQuiz.Model\bin\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.pdb
+D:\_Net.TestTask\UsabilityFactoryExamQuiz\UsabilityFactoryExamQuiz.Model\obj\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.AssemblyInfoInputs.cache
+D:\_Net.TestTask\UsabilityFactoryExamQuiz\UsabilityFactoryExamQuiz.Model\obj\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.AssemblyInfo.cs
+D:\_Net.TestTask\UsabilityFactoryExamQuiz\UsabilityFactoryExamQuiz.Model\obj\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.csproj.CoreCompileInputs.cache
+D:\_Net.TestTask\UsabilityFactoryExamQuiz\UsabilityFactoryExamQuiz.Model\obj\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.dll
+D:\_Net.TestTask\UsabilityFactoryExamQuiz\UsabilityFactoryExamQuiz.Model\obj\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.pdb
+D:\_Net.TestTask\UsabilityFactoryExamQuiz\src\UsabilityFactoryExamQuiz.Model\bin\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.deps.json
+D:\_Net.TestTask\UsabilityFactoryExamQuiz\src\UsabilityFactoryExamQuiz.Model\bin\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.dll
+D:\_Net.TestTask\UsabilityFactoryExamQuiz\src\UsabilityFactoryExamQuiz.Model\bin\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.pdb
+D:\_Net.TestTask\UsabilityFactoryExamQuiz\src\UsabilityFactoryExamQuiz.Model\obj\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.csprojAssemblyReference.cache
+D:\_Net.TestTask\UsabilityFactoryExamQuiz\src\UsabilityFactoryExamQuiz.Model\obj\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.AssemblyInfoInputs.cache
+D:\_Net.TestTask\UsabilityFactoryExamQuiz\src\UsabilityFactoryExamQuiz.Model\obj\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.AssemblyInfo.cs
+D:\_Net.TestTask\UsabilityFactoryExamQuiz\src\UsabilityFactoryExamQuiz.Model\obj\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.csproj.CoreCompileInputs.cache
+D:\_Net.TestTask\UsabilityFactoryExamQuiz\src\UsabilityFactoryExamQuiz.Model\obj\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.dll
+D:\_Net.TestTask\UsabilityFactoryExamQuiz\src\UsabilityFactoryExamQuiz.Model\obj\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.pdb
+D:\_Net.Interview\Fabusa\ExamQuiz\UsabilityFactoryExamQuiz.Model\bin\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.deps.json
+D:\_Net.Interview\Fabusa\ExamQuiz\UsabilityFactoryExamQuiz.Model\bin\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.dll
+D:\_Net.Interview\Fabusa\ExamQuiz\UsabilityFactoryExamQuiz.Model\bin\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.pdb
+D:\_Net.Interview\Fabusa\ExamQuiz\UsabilityFactoryExamQuiz.Model\obj\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.csprojAssemblyReference.cache
+D:\_Net.Interview\Fabusa\ExamQuiz\UsabilityFactoryExamQuiz.Model\obj\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.AssemblyInfoInputs.cache
+D:\_Net.Interview\Fabusa\ExamQuiz\UsabilityFactoryExamQuiz.Model\obj\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.AssemblyInfo.cs
+D:\_Net.Interview\Fabusa\ExamQuiz\UsabilityFactoryExamQuiz.Model\obj\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.csproj.CoreCompileInputs.cache
+D:\_Net.Interview\Fabusa\ExamQuiz\UsabilityFactoryExamQuiz.Model\obj\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.dll
+D:\_Net.Interview\Fabusa\ExamQuiz\UsabilityFactoryExamQuiz.Model\obj\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.pdb

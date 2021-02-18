@@ -1,0 +1,52 @@
+dbug: 18.02.2021 01:36:42.249 CoreEventId.ShadowPropertyCreated[10600] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      The property 'AnswerEntityId.AnswerAttachmentEntity' was created in shadow state because there are no eligible CLR members with a matching name.
+dbug: 18.02.2021 01:36:42.249 CoreEventId.ShadowPropertyCreated[10600] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      The property 'QuestionEntityId.AnswerEntity' was created in shadow state because there are no eligible CLR members with a matching name.
+info: 18.02.2021 01:36:42.350 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'QuestionaireDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 18.02.2021 01:36:42.441 CoreEventId.DetectChangesStarting[10800] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges starting for 'QuestionaireDBContext'.
+dbug: 18.02.2021 01:36:42.443 CoreEventId.DetectChangesCompleted[10801] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges completed for 'QuestionaireDBContext'.
+dbug: 18.02.2021 01:36:42.513 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'QuestionaireDBContext' disposed.
+dbug: 18.02.2021 01:40:47.192 CoreEventId.ShadowPropertyCreated[10600] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      The property 'AnswerEntityId.AnswerAttachmentEntity' was created in shadow state because there are no eligible CLR members with a matching name.
+dbug: 18.02.2021 01:40:47.192 CoreEventId.ShadowPropertyCreated[10600] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      The property 'QuestionEntityId.AnswerEntity' was created in shadow state because there are no eligible CLR members with a matching name.
+info: 18.02.2021 01:40:47.295 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'QuestionaireDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 18.02.2021 01:40:47.386 CoreEventId.DetectChangesStarting[10800] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges starting for 'QuestionaireDBContext'.
+dbug: 18.02.2021 01:40:47.387 CoreEventId.DetectChangesCompleted[10801] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges completed for 'QuestionaireDBContext'.
+dbug: 18.02.2021 01:40:47.398 RelationalEventId.MigrationGeneratingUpScript[20404] (Microsoft.EntityFrameworkCore.Migrations) 
+      Generating up script for migration '20210217223642_Questionaire'.
+dbug: 18.02.2021 01:40:47.440 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'QuestionaireDBContext' disposed.
+dbug: 18.02.2021 01:48:33.800 CoreEventId.ShadowPropertyCreated[10600] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      The property 'AnswerEntityId.AnswerAttachmentEntity' was created in shadow state because there are no eligible CLR members with a matching name.
+dbug: 18.02.2021 01:48:33.801 CoreEventId.ShadowPropertyCreated[10600] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      The property 'QuestionEntityId.AnswerEntity' was created in shadow state because there are no eligible CLR members with a matching name.
+info: 18.02.2021 01:48:33.904 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'QuestionaireDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 18.02.2021 01:48:33.987 CoreEventId.DetectChangesStarting[10800] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges starting for 'QuestionaireDBContext'.
+dbug: 18.02.2021 01:48:33.989 CoreEventId.DetectChangesCompleted[10801] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges completed for 'QuestionaireDBContext'.
+dbug: 18.02.2021 01:48:34.058 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'QuestionaireDBContext' disposed.
+dbug: 18.02.2021 01:48:46.438 CoreEventId.ShadowPropertyCreated[10600] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      The property 'AnswerEntityId.AnswerAttachmentEntity' was created in shadow state because there are no eligible CLR members with a matching name.
+dbug: 18.02.2021 01:48:46.439 CoreEventId.ShadowPropertyCreated[10600] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      The property 'QuestionEntityId.AnswerEntity' was created in shadow state because there are no eligible CLR members with a matching name.
+info: 18.02.2021 01:48:46.543 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'QuestionaireDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 18.02.2021 01:48:46.635 CoreEventId.DetectChangesStarting[10800] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges starting for 'QuestionaireDBContext'.
+dbug: 18.02.2021 01:48:46.637 CoreEventId.DetectChangesCompleted[10801] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges completed for 'QuestionaireDBContext'.
+dbug: 18.02.2021 01:48:46.647 RelationalEventId.MigrationGeneratingUpScript[20404] (Microsoft.EntityFrameworkCore.Migrations) 
+      Generating up script for migration '20210217224833_Questionaire'.
+dbug: 18.02.2021 01:48:46.690 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'QuestionaireDBContext' disposed.
