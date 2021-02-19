@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace UsabilityFactoryExamQuiz.Model
+namespace UsabilityFactoryExamQuiz.Model.BusinessLogic
 {
     /// <summary>
     /// Ответ на вопрос
@@ -12,6 +12,11 @@ namespace UsabilityFactoryExamQuiz.Model
         /// Идентификатор ответа
         /// </summary>
         public Guid Id { get; set; }
+
+        /// <summary>
+        /// Идентификатор вопроса, к которому относится ответ
+        /// </summary>
+        public Guid QuestionId { get; set; }
 
         /// <summary>
         /// Текст вопроса

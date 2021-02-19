@@ -354,3 +354,107 @@ dbug: 18.02.2021 04:05:32.672 RelationalEventId.ConnectionClosed[20003] (Microso
       Closed connection to database 'UsabilityFactoryExamQuiz' on server 'localhost\SQLEXPRESS'.
 dbug: 18.02.2021 04:05:32.700 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
       'QuestionaireDBContext' disposed.
+dbug: 19.02.2021 16:00:27.954 CoreEventId.ShadowPropertyCreated[10600] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      The property 'AnswerEntityId.AnswerAttachmentEntity' was created in shadow state because there are no eligible CLR members with a matching name.
+dbug: 19.02.2021 16:00:27.954 CoreEventId.ShadowPropertyCreated[10600] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      The property 'QuestionEntityId.AnswerEntity' was created in shadow state because there are no eligible CLR members with a matching name.
+info: 19.02.2021 16:00:28.073 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'QuestionaireDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 19.02.2021 16:00:28.163 CoreEventId.DetectChangesStarting[10800] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges starting for 'QuestionaireDBContext'.
+dbug: 19.02.2021 16:00:28.165 CoreEventId.DetectChangesCompleted[10801] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges completed for 'QuestionaireDBContext'.
+dbug: 19.02.2021 16:00:28.248 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'QuestionaireDBContext' disposed.
+dbug: 19.02.2021 16:01:17.903 CoreEventId.ShadowPropertyCreated[10600] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      The property 'AnswerEntityId.AnswerAttachmentEntity' was created in shadow state because there are no eligible CLR members with a matching name.
+dbug: 19.02.2021 16:01:17.904 CoreEventId.ShadowPropertyCreated[10600] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      The property 'QuestionEntityId.AnswerEntity' was created in shadow state because there are no eligible CLR members with a matching name.
+info: 19.02.2021 16:01:18.020 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'QuestionaireDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 19.02.2021 16:01:18.118 CoreEventId.DetectChangesStarting[10800] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges starting for 'QuestionaireDBContext'.
+dbug: 19.02.2021 16:01:18.120 CoreEventId.DetectChangesCompleted[10801] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges completed for 'QuestionaireDBContext'.
+dbug: 19.02.2021 16:01:18.133 RelationalEventId.MigrationGeneratingUpScript[20404] (Microsoft.EntityFrameworkCore.Migrations) 
+      Generating up script for migration '20210219130028_Questionaire'.
+dbug: 19.02.2021 16:01:18.183 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'QuestionaireDBContext' disposed.
+dbug: 19.02.2021 16:11:48.765 CoreEventId.ShadowPropertyCreated[10600] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      The property 'AnswerEntityId.AnswerAttachmentEntity' was created in shadow state because there are no eligible CLR members with a matching name.
+dbug: 19.02.2021 16:11:48.766 CoreEventId.ShadowPropertyCreated[10600] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      The property 'QuestionEntityId.AnswerEntity' was created in shadow state because there are no eligible CLR members with a matching name.
+info: 19.02.2021 16:11:48.880 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'QuestionaireDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 19.02.2021 16:11:48.970 CoreEventId.DetectChangesStarting[10800] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges starting for 'QuestionaireDBContext'.
+dbug: 19.02.2021 16:11:48.972 CoreEventId.DetectChangesCompleted[10801] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges completed for 'QuestionaireDBContext'.
+dbug: 19.02.2021 16:11:49.051 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'QuestionaireDBContext' disposed.
+dbug: 19.02.2021 16:12:09.508 CoreEventId.ShadowPropertyCreated[10600] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      The property 'AnswerEntityId.AnswerAttachmentEntity' was created in shadow state because there are no eligible CLR members with a matching name.
+dbug: 19.02.2021 16:12:09.508 CoreEventId.ShadowPropertyCreated[10600] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      The property 'QuestionEntityId.AnswerEntity' was created in shadow state because there are no eligible CLR members with a matching name.
+info: 19.02.2021 16:12:09.625 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'QuestionaireDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+dbug: 19.02.2021 16:12:09.722 CoreEventId.DetectChangesStarting[10800] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges starting for 'QuestionaireDBContext'.
+dbug: 19.02.2021 16:12:09.724 CoreEventId.DetectChangesCompleted[10801] (Microsoft.EntityFrameworkCore.ChangeTracking) 
+      DetectChanges completed for 'QuestionaireDBContext'.
+dbug: 19.02.2021 16:12:09.737 RelationalEventId.MigrationGeneratingUpScript[20404] (Microsoft.EntityFrameworkCore.Migrations) 
+      Generating up script for migration '20210219131148_Questionaire'.
+dbug: 19.02.2021 16:12:09.787 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'QuestionaireDBContext' disposed.
+dbug: 19.02.2021 17:29:24.876 CoreEventId.ShadowPropertyCreated[10600] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      The property 'AnswerEntityId.AnswerAttachmentEntity' was created in shadow state because there are no eligible CLR members with a matching name.
+dbug: 19.02.2021 17:29:24.877 CoreEventId.ShadowPropertyCreated[10600] (Microsoft.EntityFrameworkCore.Model.Validation) 
+      The property 'QuestionEntityId.AnswerEntity' was created in shadow state because there are no eligible CLR members with a matching name.
+info: 19.02.2021 17:29:24.997 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 5.0.3 initialized 'QuestionaireDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+dbug: 19.02.2021 17:29:25.060 CoreEventId.QueryCompilationStarting[10111] (Microsoft.EntityFrameworkCore.Query) 
+      Compiling query expression: 
+      'DbSet<AnswerEntity>()
+          .FirstOrDefault(u => u.Id.Equals(__id_0))'
+dbug: 19.02.2021 17:29:25.273 CoreEventId.QueryExecutionPlanned[10107] (Microsoft.EntityFrameworkCore.Query) 
+      Generated query execution expression: 
+      'queryContext => new SingleQueryingEnumerable<AnswerEntity>(
+          (RelationalQueryContext)queryContext, 
+          RelationalCommandCache.SelectExpression(
+              Projection Mapping:
+                  EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: AnswerEntity.Id (Guid) Required PK Index AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: AnswerEntity.QuestionEntityId (no field, Nullable<Guid>) Shadow FK Index, 1], [Property: AnswerEntity.Text (string), 2], }
+              SELECT TOP(1) a.Id, a.QuestionEntityId, a.Text
+              FROM Answers AS a
+              WHERE a.Id == @__id_0), 
+          Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, AnswerEntity>, 
+          UsabilityFactoryExamQuiz.Model.EF.QuestionaireDBContext, 
+          False, 
+          False
+      )
+          .SingleOrDefault()'
+dbug: 19.02.2021 17:29:25.339 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Creating DbCommand for 'ExecuteReader'.
+dbug: 19.02.2021 17:29:25.345 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Created DbCommand for 'ExecuteReader' (33ms).
+dbug: 19.02.2021 17:29:25.362 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opening connection to database 'UsabilityFactoryExamQuiz' on server 'localhost\SQLEXPRESS'.
+dbug: 19.02.2021 17:29:26.594 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Opened connection to database 'UsabilityFactoryExamQuiz' on server 'localhost\SQLEXPRESS'.
+dbug: 19.02.2021 17:29:26.600 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executing DbCommand [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [a].[Id], [a].[QuestionEntityId], [a].[Text]
+      FROM [Answers] AS [a]
+      WHERE [a].[Id] = @__id_0
+info: 19.02.2021 17:29:26.635 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (37ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [a].[Id], [a].[QuestionEntityId], [a].[Text]
+      FROM [Answers] AS [a]
+      WHERE [a].[Id] = @__id_0
+dbug: 19.02.2021 17:29:26.644 RelationalEventId.DataReaderDisposing[20300] (Microsoft.EntityFrameworkCore.Database.Command) 
+      A data reader was disposed.
+dbug: 19.02.2021 17:29:26.646 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closing connection to database 'UsabilityFactoryExamQuiz' on server 'localhost\SQLEXPRESS'.
+dbug: 19.02.2021 17:29:26.651 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection) 
+      Closed connection to database 'UsabilityFactoryExamQuiz' on server 'localhost\SQLEXPRESS'.
+dbug: 19.02.2021 17:29:26.740 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      'QuestionaireDBContext' disposed.

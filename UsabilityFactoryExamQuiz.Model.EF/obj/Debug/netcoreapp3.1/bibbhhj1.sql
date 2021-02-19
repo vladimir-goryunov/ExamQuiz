@@ -1,8 +1,4 @@
-﻿/*
-    Скрипт создает таблицы основных сущностей
-    БД создать отдельно
-*/
-IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+﻿IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
 BEGIN
     CREATE TABLE [__EFMigrationsHistory] (
         [MigrationId] nvarchar(150) NOT NULL,
@@ -31,6 +27,7 @@ GO
 
 CREATE TABLE [Answers] (
     [Id] uniqueidentifier NOT NULL,
+    [QuestionId] uniqueidentifier NOT NULL,
     [Text] nvarchar(max) NULL,
     [QuestionEntityId] uniqueidentifier NULL,
     CONSTRAINT [PK_Answers] PRIMARY KEY ([Id]),
@@ -66,11 +63,14 @@ GO
 CREATE INDEX [IX_Answers_QuestionEntityId] ON [Answers] ([QuestionEntityId]);
 GO
 
+CREATE INDEX [IX_Answers_QuestionId] ON [Answers] ([QuestionId]);
+GO
+
 CREATE UNIQUE INDEX [IX_Questions_Id] ON [Questions] ([Id]);
 GO
 
 INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
-VALUES (N'20210217224833_Questionaire', N'5.0.3');
+VALUES (N'20210219130028_Questionaire', N'5.0.3');
 GO
 
 COMMIT;

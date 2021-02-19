@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using UsabilityFactoryExamQuiz.Model.EF;
+using UsabilityFactoryExamQuiz.Utils.Helpers;
 using UsabilityFactoryExamQuiz.Utils.Repositories;
 using UsabilityFactoryExamQuiz.Utils.Repositories.Interfaces;
 
@@ -57,13 +58,17 @@ namespace UsabilityFactoryExamQuiz.WebSite
 
         private void AddDb(IServiceCollection services)
         {
+            DateTime created = DateTime.Now;
+            System.Diagnostics.Debug.WriteLine(created);
+
             System.Diagnostics.Debug.WriteLine(Guid.NewGuid().ToString("D"));
 
             services.AddDbContext<IQuestionaireDBContext, QuestionaireDBContext>(opts =>
                 opts.UseLazyLoadingProxies().UseSqlServer(Configuration.GetConnectionString("DefaultConnection")),
                 ServiceLifetime.Transient);
 
-            services.AddTransient<IAnswerRepository, AnswerRepository>();
+            services.AddTransient<IAnswerRepository, AnswerRepository>(); 
+            services.AddTransient<IFileRepository, AzureStorageRepository>();
         }
     }
 }

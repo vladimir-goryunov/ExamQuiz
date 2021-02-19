@@ -10,7 +10,7 @@ using UsabilityFactoryExamQuiz.Model.EF;
 namespace UsabilityFactoryExamQuiz.Model.EF.Migrations
 {
     [DbContext(typeof(QuestionaireDBContext))]
-    [Migration("20210217224833_Questionaire")]
+    [Migration("20210219131148_Questionaire")]
     partial class Questionaire
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

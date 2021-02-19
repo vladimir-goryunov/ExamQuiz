@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace UsabilityFactoryExamQuiz.Model
+namespace UsabilityFactoryExamQuiz.Model.BusinessLogic
 {
     /// <summary>
     /// Вложение, загруженное пользователем при ответе на вопрос

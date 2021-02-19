@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace UsabilityFactoryExamQuiz.Model
+namespace UsabilityFactoryExamQuiz.Model.BusinessLogic
 {
     /// <summary>
     /// Событие, описывающее действие пользователя при ответе на вопрос

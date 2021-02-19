@@ -11,7 +11,7 @@ namespace UsabilityFactoryExamQuiz.Model.EF
     /// БД-контекст приложения
     /// </summary>
     /// <remarks>
-    /// Миграция:
+    /// Миграция создание классов и скрипта:
     /// PM> Add-Migration Questionaire
     /// PM> Script-Migration 0 Questionaire
     /// </remarks>
@@ -19,7 +19,7 @@ namespace UsabilityFactoryExamQuiz.Model.EF
     {
         private readonly StreamWriter logStream = new StreamWriter("applog.txt", true);
 
-        public DbSet<QuestionEntity> Questions { get; set; }
+        //public DbSet<QuestionEntity> Questions { get; set; }
 
         public DbSet<AnswerEntity> Answers { get; set; }
 

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using UsabilityFactoryExamQuiz.Utils.Repositories.Interfaces;
 using UsabilityFactoryExamQuiz.Utils.Responses;
 using UsabilityFactoryExamQuiz.Utils.Exceptions;
+using UsabilityFactoryExamQuiz.Model.DataContract;
 
 namespace UsabilityFactoryExamQuiz.WebSite.Controllers
 {
@@ -14,7 +15,6 @@ namespace UsabilityFactoryExamQuiz.WebSite.Controllers
     public class AnswersController : ControllerBase
     {
         private readonly IAnswerRepository _answerRepository;
-
         public AnswersController(IAnswerRepository answerRepository) {
             _answerRepository = answerRepository;
         }
@@ -53,18 +53,12 @@ namespace UsabilityFactoryExamQuiz.WebSite.Controllers
         /// <returns></returns>
         [HttpGet("{answerId}")]
         [Route("~/answers/{answerId}/attachments")]
-        public async Task<ResponseMessage> Attachments(String answerId)
+        public async Task<ResponseMessage> Attachments(AttachmentModel attachmentModel)
         {
-            //TODO передавать в метод массив файлов вторым параметром
-
             try
             {
-                //var answers = await _answerRepository.GetAll();
-                //var result = _mapper.Map<List<Answer>>(answers);
-                //return new ResponseMessage("", string.Join("<br>", answers.Select(x => x.Text).ToList()));
-
-                _answerRepository.SaveAnswerAttachments(Guid.Parse(answerId));
-
+                attachmentModel.Files = Request.Form.Files;
+                _answerRepository.SaveAnswerAttachments(attachmentModel);
             }
             catch (AnswerNotFoundException ex)
             {
@@ -78,10 +72,7 @@ namespace UsabilityFactoryExamQuiz.WebSite.Controllers
                                             (int)HttpStatusCode.InternalServerError);
             }
 
-            return await Task.Run(() => Print($"Имитация метода POST. Для answerId={answerId} cохраним вложения в Azure Storage и SQL Express БД"));
-
-
-
+            return await Task.Run(() => Print($"Имитация метода POST. Сохраним вложения в Azure Storage и SQL Express БД"));
         }
 
         /// <summary>
@@ -91,17 +82,11 @@ namespace UsabilityFactoryExamQuiz.WebSite.Controllers
         /// <returns></returns>
         [HttpGet("{answerId}")]
         [Route("~/answers/{answerId}/events")]
-        public async Task<ResponseMessage> Events(String answerId)
+        public async Task<ResponseMessage> Events(EventModel eventModel)
         {
-            //TODO передавать в метод массив событий в виде JSON-строки вторым параметром
-            
             try
             {
-                //var answers = await _answerRepository.GetAll();
-                //var result = _mapper.Map<List<Answer>>(answers);
-                //return new ResponseMessage("", string.Join("<br>", answers.Select(x => x.Text).ToList()));               
-
-                _answerRepository.SaveAnswerEvents(Guid.Parse(answerId));
+                _answerRepository.SaveAnswerEvents(eventModel);
             }
             catch (AnswerNotFoundException ex)
             {
@@ -115,7 +100,7 @@ namespace UsabilityFactoryExamQuiz.WebSite.Controllers
                                             (int)HttpStatusCode.InternalServerError);
             }
 
-            return await Task.Run(() => Print($"Имитация метода POST. Для answerId={answerId} cохраним входные события в SQL Express БД"));
+            return await Task.Run(() => Print($"Имитация метода POST. Сохраним входные события в SQL Express БД"));
         }
 
     }

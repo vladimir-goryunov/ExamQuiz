@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace UsabilityFactoryExamQuiz.Model
+namespace UsabilityFactoryExamQuiz.Model.BusinessLogic
 {
     /// <summary>
     /// Вопрос анкетирования

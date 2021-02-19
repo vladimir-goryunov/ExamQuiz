@@ -1,4 +1,4 @@
-﻿namespace UsabilityFactoryExamQuiz.Model
+﻿namespace UsabilityFactoryExamQuiz.Model.BusinessLogic
 {
     /// <summary>
     /// Фиксируемые в системе типы действий пользователя при ответе на вопрос

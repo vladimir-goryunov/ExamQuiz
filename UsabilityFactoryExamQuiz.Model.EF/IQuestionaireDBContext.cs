@@ -8,7 +8,10 @@ namespace UsabilityFactoryExamQuiz.Model.EF
 {
     public interface IQuestionaireDBContext : IDisposable
     {
-        DbSet<QuestionEntity> Questions { get; }
+        //DbSet<QuestionEntity> Questions { get; }
+        /// <summary>
+        /// Ответы 
+        /// </summary>
         DbSet<AnswerEntity> Answers { get; }
         int SaveChanges();
         Task<int> SaveChangesAsync(CancellationToken cancellationToken = default(CancellationToken));
