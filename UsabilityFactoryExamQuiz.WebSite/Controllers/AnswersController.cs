@@ -1,13 +1,16 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
+using System.Linq;
 using System.Threading.Tasks;
 using UsabilityFactoryExamQuiz.Utils.Repositories.Interfaces;
 using UsabilityFactoryExamQuiz.Utils.Responses;
 using UsabilityFactoryExamQuiz.Utils.Exceptions;
 using UsabilityFactoryExamQuiz.Model.DataContract;
+using System.Collections.Generic;
+using UsabilityFactoryExamQuiz.Model.EF.Models;
+using UsabilityFactoryExamQuiz.Model.BusinessLogic;
+using UsabilityFactoryExamQuiz.Utils.Helpers;
 
 namespace UsabilityFactoryExamQuiz.WebSite.Controllers
 {
@@ -15,34 +18,42 @@ namespace UsabilityFactoryExamQuiz.WebSite.Controllers
     public class AnswersController : ControllerBase
     {
         private readonly IAnswerRepository _answerRepository;
-        public AnswersController(IAnswerRepository answerRepository) {
+        public AnswersController(IAnswerRepository answerRepository)
+        {
             _answerRepository = answerRepository;
         }
 
-        [HttpGet]
+        [HttpPost]
         [Route("~/answers")]
-        public async Task<ResponseMessage> Get()
+        public async Task<ResponseMessage<List<AnswerEntity>>> Get()
         {
             try
             {
-                //var answers = await _answerRepository.GetAll();
-                //var result = _mapper.Map<List<Answer>>(answers);
-                //return new ResponseMessage("", string.Join("<br>", answers.Select(x => x.Text).ToList()));
-                return await Task.Run(() => Print(null));
+                var answers = await _answerRepository.GetAll();
+                if (!answers.Any())
+                {
+                    _answerRepository.CreateTestDataSet();
+                    answers = await _answerRepository.GetAll();
+                }
+
+                return new ResponseMessage<List<AnswerEntity>>("Информация", "Список текстов ответов")
+                {
+                    Data = answers.ToList()
+                };
             }
             catch (Exception ex)
             {
                 //_logger.LogError(ex.InnerException ?? ex, $"Ошибка при получении списка ответов.");
-                return new ResponseMessage("Ошибка", 
-                                            "Ошибка при получении списка ответов.",
+                return new ResponseMessage<List<AnswerEntity>>("Ошибка",
+                                            $"Ошибка при получении списка ответов - {ex.Message}",
+                                            ex.ToString(),
                                             (int)HttpStatusCode.InternalServerError);
             }
-
-            
         }
 
-        private ResponseMessage Print(String value) {
-            return new ResponseMessage("Information", value);
+        private ResponseMessage<String> Print(String value)
+        {
+            return new ResponseMessage<String>("Information", value);
         }
 
         /// <summary>
@@ -51,9 +62,9 @@ namespace UsabilityFactoryExamQuiz.WebSite.Controllers
         /// </summary>
         /// <param name="answerId"></param>
         /// <returns></returns>
-        [HttpGet("{answerId}")]
+        [HttpPost("{answerId}")]
         [Route("~/answers/{answerId}/attachments")]
-        public async Task<ResponseMessage> Attachments(AttachmentModel attachmentModel)
+        public async Task<ResponseMessage<String>> Attachments(AttachmentModel attachmentModel)
         {
             try
             {
@@ -66,23 +77,27 @@ namespace UsabilityFactoryExamQuiz.WebSite.Controllers
             }
             catch (Exception ex)
             {
-                return new ResponseMessage("Ошибка",
-                                            "Ошибка при сохранении списка вложений.",
+                return new ResponseMessage<String>("Ошибка",
+                                            $"Ошибка при сохранении списка вложений - {ex.Message}",
                                             ex.ToString(),
                                             (int)HttpStatusCode.InternalServerError);
             }
 
-            return await Task.Run(() => Print($"Имитация метода POST. Сохраним вложения в Azure Storage и SQL Express БД"));
+            return await Task.Run(() => Print("Список вложений успешно сохранён"));
         }
 
         /// <summary>
         /// Сохранить события в SQL базе данных в таблице AnswerEvents
         /// </summary>
         /// <param name="answerId"></param>
+        /// <example>
+        /// Для тестирования использовать в PowerShell команду
+        /// Invoke-RestMethod http://localhost:22772/answers/2B75C2A4-A691-4706-9B2A-38301B131025/events -Method POST -Body (@{AnswerId = "2B75C2A4-A691-4706-9B2A-38301B131025"; AnswerEventJSON = "Value=500"} | ConvertTo-Json) -ContentType "application/json; charset=utf-8"
+        /// </example>
         /// <returns></returns>
-        [HttpGet("{answerId}")]
+        [HttpPost("{answerId}")]
         [Route("~/answers/{answerId}/events")]
-        public async Task<ResponseMessage> Events(EventModel eventModel)
+        public async Task<ResponseMessage<String>> Events(EventModel eventModel)
         {
             try
             {
@@ -94,14 +109,22 @@ namespace UsabilityFactoryExamQuiz.WebSite.Controllers
             }
             catch (Exception ex)
             {
-                return new ResponseMessage("Ошибка",
-                                            "Ошибка при сохранении списка событий.",
+                return new ResponseMessage<String>("Ошибка",
+                                            $"Ошибка при сохранении списка событий - {ex.Message}",
                                             ex.ToString(),
                                             (int)HttpStatusCode.InternalServerError);
             }
 
-            return await Task.Run(() => Print($"Имитация метода POST. Сохраним входные события в SQL Express БД"));
+            return await Task.Run(() => Print("Список событий успешно сохранён"));
         }
 
+
+
+        [HttpPost("{answerId}")]
+        [Route("~/answers/{answerId}/randomevents")]
+        public async Task<List<AnswerEventEntity>> RandomEvents(Guid answerId)
+        {
+            return await Task.Run(() => DataGeneratorHelper.GenerateEvents(answerId));
+        }
     }
 }

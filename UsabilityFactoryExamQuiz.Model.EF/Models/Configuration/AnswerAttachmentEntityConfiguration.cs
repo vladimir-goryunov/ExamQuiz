@@ -11,6 +11,8 @@ namespace UsabilityFactoryExamQuiz.Model.EF.Models.Configuration
 
             builder.HasKey(f => f.Id);
             builder.HasIndex(f => f.Id).IsUnique();
+            builder.Property(f => f.Id).IsRequired().ValueGeneratedNever();
+
             builder.HasIndex(f => f.AnswerId);
 
             builder.Property(f => f.MimeType).IsRequired();

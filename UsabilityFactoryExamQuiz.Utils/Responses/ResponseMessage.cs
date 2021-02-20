@@ -5,7 +5,7 @@ namespace UsabilityFactoryExamQuiz.Utils.Responses
     /// <summary>
     /// Сообщение об ответе сервера о выполнении метода
     /// </summary>
-    public class ResponseMessage
+    public class ResponseMessage<T>
     {
         /// <summary>
         /// User-friendly заголовок ответа
@@ -15,6 +15,9 @@ namespace UsabilityFactoryExamQuiz.Utils.Responses
         /// User-friendly текст ответа
         /// </summary>
         public string Text { get; set; }
+
+        public T Data { get; set; }
+
         /// <summary>
         /// Техническая инфо - описание ошибки
         /// </summary>

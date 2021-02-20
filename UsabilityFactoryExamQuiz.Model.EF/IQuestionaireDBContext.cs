@@ -8,7 +8,7 @@ namespace UsabilityFactoryExamQuiz.Model.EF
 {
     public interface IQuestionaireDBContext : IDisposable
     {
-        //DbSet<QuestionEntity> Questions { get; }
+        DbSet<QuestionEntity> Questions { get; }
         /// <summary>
         /// Ответы 
         /// </summary>

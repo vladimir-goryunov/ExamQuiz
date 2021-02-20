@@ -1,4 +1,8 @@
+D:\_Net.TestTask\UsabilityFactoryExamQuiz\UsabilityFactoryExamQuiz.Model.EF\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\_Net.TestTask\UsabilityFactoryExamQuiz\UsabilityFactoryExamQuiz.Model.EF\bin\Debug\netcoreapp3.1\appsettings.json
 D:\_Net.TestTask\UsabilityFactoryExamQuiz\UsabilityFactoryExamQuiz.Model.EF\bin\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.deps.json
+D:\_Net.TestTask\UsabilityFactoryExamQuiz\UsabilityFactoryExamQuiz.Model.EF\bin\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.runtimeconfig.json
+D:\_Net.TestTask\UsabilityFactoryExamQuiz\UsabilityFactoryExamQuiz.Model.EF\bin\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.runtimeconfig.dev.json
 D:\_Net.TestTask\UsabilityFactoryExamQuiz\UsabilityFactoryExamQuiz.Model.EF\bin\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.dll
 D:\_Net.TestTask\UsabilityFactoryExamQuiz\UsabilityFactoryExamQuiz.Model.EF\bin\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.pdb
 D:\_Net.TestTask\UsabilityFactoryExamQuiz\UsabilityFactoryExamQuiz.Model.EF\obj\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.AssemblyInfoInputs.cache
@@ -6,34 +10,7 @@ D:\_Net.TestTask\UsabilityFactoryExamQuiz\UsabilityFactoryExamQuiz.Model.EF\obj\
 D:\_Net.TestTask\UsabilityFactoryExamQuiz\UsabilityFactoryExamQuiz.Model.EF\obj\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.csproj.CoreCompileInputs.cache
 D:\_Net.TestTask\UsabilityFactoryExamQuiz\UsabilityFactoryExamQuiz.Model.EF\obj\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.dll
 D:\_Net.TestTask\UsabilityFactoryExamQuiz\UsabilityFactoryExamQuiz.Model.EF\obj\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.pdb
-D:\_Net.TestTask\UsabilityFactoryExamQuiz\src\UsabilityFactoryExamQuiz.Model.EF\bin\Debug\netcoreapp3.1\appsettings.Development.json
-D:\_Net.TestTask\UsabilityFactoryExamQuiz\src\UsabilityFactoryExamQuiz.Model.EF\bin\Debug\netcoreapp3.1\appsettings.json
-D:\_Net.TestTask\UsabilityFactoryExamQuiz\src\UsabilityFactoryExamQuiz.Model.EF\bin\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.deps.json
-D:\_Net.TestTask\UsabilityFactoryExamQuiz\src\UsabilityFactoryExamQuiz.Model.EF\bin\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.runtimeconfig.json
-D:\_Net.TestTask\UsabilityFactoryExamQuiz\src\UsabilityFactoryExamQuiz.Model.EF\bin\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.runtimeconfig.dev.json
-D:\_Net.TestTask\UsabilityFactoryExamQuiz\src\UsabilityFactoryExamQuiz.Model.EF\bin\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.dll
-D:\_Net.TestTask\UsabilityFactoryExamQuiz\src\UsabilityFactoryExamQuiz.Model.EF\bin\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.pdb
-D:\_Net.TestTask\UsabilityFactoryExamQuiz\src\UsabilityFactoryExamQuiz.Model.EF\obj\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.AssemblyInfoInputs.cache
-D:\_Net.TestTask\UsabilityFactoryExamQuiz\src\UsabilityFactoryExamQuiz.Model.EF\obj\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.AssemblyInfo.cs
-D:\_Net.TestTask\UsabilityFactoryExamQuiz\src\UsabilityFactoryExamQuiz.Model.EF\obj\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.csproj.CoreCompileInputs.cache
-D:\_Net.TestTask\UsabilityFactoryExamQuiz\src\UsabilityFactoryExamQuiz.Model.EF\obj\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.dll
-D:\_Net.TestTask\UsabilityFactoryExamQuiz\src\UsabilityFactoryExamQuiz.Model.EF\obj\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.pdb
-D:\_Net.TestTask\UsabilityFactoryExamQuiz\src\UsabilityFactoryExamQuiz.Model.EF\obj\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.genruntimeconfig.cache
-D:\_Net.TestTask\UsabilityFactoryExamQuiz\src\UsabilityFactoryExamQuiz.Model.EF\obj\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.csprojAssemblyReference.cache
-D:\_Net.Interview\Fabusa\ExamQuiz\UsabilityFactoryExamQuiz.Model.EF\bin\Debug\netcoreapp3.1\appsettings.Development.json
-D:\_Net.Interview\Fabusa\ExamQuiz\UsabilityFactoryExamQuiz.Model.EF\bin\Debug\netcoreapp3.1\appsettings.json
-D:\_Net.Interview\Fabusa\ExamQuiz\UsabilityFactoryExamQuiz.Model.EF\bin\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.deps.json
-D:\_Net.Interview\Fabusa\ExamQuiz\UsabilityFactoryExamQuiz.Model.EF\bin\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.runtimeconfig.json
-D:\_Net.Interview\Fabusa\ExamQuiz\UsabilityFactoryExamQuiz.Model.EF\bin\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.runtimeconfig.dev.json
-D:\_Net.Interview\Fabusa\ExamQuiz\UsabilityFactoryExamQuiz.Model.EF\bin\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.dll
-D:\_Net.Interview\Fabusa\ExamQuiz\UsabilityFactoryExamQuiz.Model.EF\bin\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.pdb
-D:\_Net.Interview\Fabusa\ExamQuiz\UsabilityFactoryExamQuiz.Model.EF\obj\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.csprojAssemblyReference.cache
-D:\_Net.Interview\Fabusa\ExamQuiz\UsabilityFactoryExamQuiz.Model.EF\obj\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.AssemblyInfoInputs.cache
-D:\_Net.Interview\Fabusa\ExamQuiz\UsabilityFactoryExamQuiz.Model.EF\obj\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.AssemblyInfo.cs
-D:\_Net.Interview\Fabusa\ExamQuiz\UsabilityFactoryExamQuiz.Model.EF\obj\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.csproj.CoreCompileInputs.cache
-D:\_Net.Interview\Fabusa\ExamQuiz\UsabilityFactoryExamQuiz.Model.EF\obj\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.dll
-D:\_Net.Interview\Fabusa\ExamQuiz\UsabilityFactoryExamQuiz.Model.EF\obj\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.pdb
-D:\_Net.Interview\Fabusa\ExamQuiz\UsabilityFactoryExamQuiz.Model.EF\obj\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.genruntimeconfig.cache
+D:\_Net.TestTask\UsabilityFactoryExamQuiz\UsabilityFactoryExamQuiz.Model.EF\obj\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.genruntimeconfig.cache
 D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\Source Code\UsabilityFactoryExamQuiz\UsabilityFactoryExamQuiz.Model.EF\bin\Debug\netcoreapp3.1\appsettings.Development.json
 D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\Source Code\UsabilityFactoryExamQuiz\UsabilityFactoryExamQuiz.Model.EF\bin\Debug\netcoreapp3.1\appsettings.json
 D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\Source Code\UsabilityFactoryExamQuiz\UsabilityFactoryExamQuiz.Model.EF\bin\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.deps.json
@@ -47,4 +24,3 @@ D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрик
 D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\Source Code\UsabilityFactoryExamQuiz\UsabilityFactoryExamQuiz.Model.EF\obj\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.dll
 D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\Source Code\UsabilityFactoryExamQuiz\UsabilityFactoryExamQuiz.Model.EF\obj\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.pdb
 D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\Source Code\UsabilityFactoryExamQuiz\UsabilityFactoryExamQuiz.Model.EF\obj\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.genruntimeconfig.cache
-D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\Source Code\UsabilityFactoryExamQuiz\UsabilityFactoryExamQuiz.Model.EF\obj\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.csprojAssemblyReference.cache
