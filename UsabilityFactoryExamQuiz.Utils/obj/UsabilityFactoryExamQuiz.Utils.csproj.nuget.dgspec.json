@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\_Net.Interview\\Fabusa\\ExamQuiz\\UsabilityFactoryExamQuiz.Utils\\UsabilityFactoryExamQuiz.Utils.csproj": {}
+    "D:\\_Net.Interview\\UsabilityFactoryExamQuiz\\UsabilityFactoryExamQuiz.Utils\\UsabilityFactoryExamQuiz.Utils.csproj": {}
   },
   "projects": {
-    "D:\\_Net.Interview\\Fabusa\\ExamQuiz\\UsabilityFactoryExamQuiz.Model.EF\\UsabilityFactoryExamQuiz.Model.EF.csproj": {
+    "D:\\_Net.Interview\\UsabilityFactoryExamQuiz\\UsabilityFactoryExamQuiz.Model.EF\\UsabilityFactoryExamQuiz.Model.EF.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\_Net.Interview\\Fabusa\\ExamQuiz\\UsabilityFactoryExamQuiz.Model.EF\\UsabilityFactoryExamQuiz.Model.EF.csproj",
+        "projectUniqueName": "D:\\_Net.Interview\\UsabilityFactoryExamQuiz\\UsabilityFactoryExamQuiz.Model.EF\\UsabilityFactoryExamQuiz.Model.EF.csproj",
         "projectName": "UsabilityFactoryExamQuiz.Model.EF",
-        "projectPath": "D:\\_Net.Interview\\Fabusa\\ExamQuiz\\UsabilityFactoryExamQuiz.Model.EF\\UsabilityFactoryExamQuiz.Model.EF.csproj",
+        "projectPath": "D:\\_Net.Interview\\UsabilityFactoryExamQuiz\\UsabilityFactoryExamQuiz.Model.EF\\UsabilityFactoryExamQuiz.Model.EF.csproj",
         "packagesPath": "C:\\Users\\Vladimir\\.nuget\\packages\\",
-        "outputPath": "D:\\_Net.Interview\\Fabusa\\ExamQuiz\\UsabilityFactoryExamQuiz.Model.EF\\obj\\",
+        "outputPath": "D:\\_Net.Interview\\UsabilityFactoryExamQuiz\\UsabilityFactoryExamQuiz.Model.EF\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Vladimir\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -82,14 +82,74 @@
         }
       }
     },
-    "D:\\_Net.Interview\\Fabusa\\ExamQuiz\\UsabilityFactoryExamQuiz.Utils\\UsabilityFactoryExamQuiz.Utils.csproj": {
+    "D:\\_Net.Interview\\UsabilityFactoryExamQuiz\\UsabilityFactoryExamQuiz.Model\\UsabilityFactoryExamQuiz.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\_Net.Interview\\Fabusa\\ExamQuiz\\UsabilityFactoryExamQuiz.Utils\\UsabilityFactoryExamQuiz.Utils.csproj",
-        "projectName": "UsabilityFactoryExamQuiz.Utils",
-        "projectPath": "D:\\_Net.Interview\\Fabusa\\ExamQuiz\\UsabilityFactoryExamQuiz.Utils\\UsabilityFactoryExamQuiz.Utils.csproj",
+        "projectUniqueName": "D:\\_Net.Interview\\UsabilityFactoryExamQuiz\\UsabilityFactoryExamQuiz.Model\\UsabilityFactoryExamQuiz.Model.csproj",
+        "projectName": "UsabilityFactoryExamQuiz.Model",
+        "projectPath": "D:\\_Net.Interview\\UsabilityFactoryExamQuiz\\UsabilityFactoryExamQuiz.Model\\UsabilityFactoryExamQuiz.Model.csproj",
         "packagesPath": "C:\\Users\\Vladimir\\.nuget\\packages\\",
-        "outputPath": "D:\\_Net.Interview\\Fabusa\\ExamQuiz\\UsabilityFactoryExamQuiz.Utils\\obj\\",
+        "outputPath": "D:\\_Net.Interview\\UsabilityFactoryExamQuiz\\UsabilityFactoryExamQuiz.Model\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Vladimir\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\_Net.Interview\\UsabilityFactoryExamQuiz\\UsabilityFactoryExamQuiz.Utils\\UsabilityFactoryExamQuiz.Utils.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\_Net.Interview\\UsabilityFactoryExamQuiz\\UsabilityFactoryExamQuiz.Utils\\UsabilityFactoryExamQuiz.Utils.csproj",
+        "projectName": "UsabilityFactoryExamQuiz.Utils",
+        "projectPath": "D:\\_Net.Interview\\UsabilityFactoryExamQuiz\\UsabilityFactoryExamQuiz.Utils\\UsabilityFactoryExamQuiz.Utils.csproj",
+        "packagesPath": "C:\\Users\\Vladimir\\.nuget\\packages\\",
+        "outputPath": "D:\\_Net.Interview\\UsabilityFactoryExamQuiz\\UsabilityFactoryExamQuiz.Utils\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Vladimir\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -106,8 +166,11 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\_Net.Interview\\Fabusa\\ExamQuiz\\UsabilityFactoryExamQuiz.Model.EF\\UsabilityFactoryExamQuiz.Model.EF.csproj": {
-                "projectPath": "D:\\_Net.Interview\\Fabusa\\ExamQuiz\\UsabilityFactoryExamQuiz.Model.EF\\UsabilityFactoryExamQuiz.Model.EF.csproj"
+              "D:\\_Net.Interview\\UsabilityFactoryExamQuiz\\UsabilityFactoryExamQuiz.Model.EF\\UsabilityFactoryExamQuiz.Model.EF.csproj": {
+                "projectPath": "D:\\_Net.Interview\\UsabilityFactoryExamQuiz\\UsabilityFactoryExamQuiz.Model.EF\\UsabilityFactoryExamQuiz.Model.EF.csproj"
+              },
+              "D:\\_Net.Interview\\UsabilityFactoryExamQuiz\\UsabilityFactoryExamQuiz.Model\\UsabilityFactoryExamQuiz.Model.csproj": {
+                "projectPath": "D:\\_Net.Interview\\UsabilityFactoryExamQuiz\\UsabilityFactoryExamQuiz.Model\\UsabilityFactoryExamQuiz.Model.csproj"
               }
             }
           }
@@ -121,6 +184,16 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Azure.Storage.Blobs": {
+              "target": "Package",
+              "version": "[12.8.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

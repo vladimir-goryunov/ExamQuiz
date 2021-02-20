@@ -30,5 +30,13 @@ namespace UsabilityFactoryExamQuiz.Model.EF.Models
         /// Размер файла вложения
         /// </summary>
         public Int32 Size { get; set; }
+
+
+
+        public AnswerAttachmentEntity() { }
+
+        public AnswerAttachmentEntity(Guid answerId) {
+            AnswerId = answerId;
+        }
     }
 }

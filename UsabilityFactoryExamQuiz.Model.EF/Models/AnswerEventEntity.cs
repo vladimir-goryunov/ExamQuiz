@@ -7,6 +7,14 @@ namespace UsabilityFactoryExamQuiz.Model.EF.Models
     public class AnswerEventEntity
     {
         /// <summary>
+        /// Идентификатор события
+        /// </summary>
+        public Guid Id { get; set; }
+        /// <summary>
+        /// Идентификатор ответа, к которому относится событие
+        /// </summary>
+        public Guid AnswerId { get; set; }
+        /// <summary>
         /// Описательная характеристика фиксируемого действия пользователя, 
         /// которое он выполняет при ответе на вопрос
         /// </summary>

@@ -22,7 +22,6 @@ namespace UsabilityFactoryExamQuiz.Model.EF.Migrations
             modelBuilder.Entity("UsabilityFactoryExamQuiz.Model.EF.Models.AnswerAttachmentEntity", b =>
                 {
                     b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid?>("AnswerEntityId")
@@ -81,6 +80,15 @@ namespace UsabilityFactoryExamQuiz.Model.EF.Migrations
 
             modelBuilder.Entity("UsabilityFactoryExamQuiz.Model.EF.Models.AnswerEventEntity", b =>
                 {
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("AnswerEntityId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("AnswerId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<DateTime>("ClientTime")
                         .HasColumnType("datetime2");
 
@@ -89,6 +97,15 @@ namespace UsabilityFactoryExamQuiz.Model.EF.Migrations
 
                     b.Property<string>("Value")
                         .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AnswerEntityId");
+
+                    b.HasIndex("AnswerId");
+
+                    b.HasIndex("Id")
+                        .IsUnique();
 
                     b.ToTable("AnswerEvents");
                 });
@@ -124,9 +141,18 @@ namespace UsabilityFactoryExamQuiz.Model.EF.Migrations
                         .HasForeignKey("QuestionEntityId");
                 });
 
+            modelBuilder.Entity("UsabilityFactoryExamQuiz.Model.EF.Models.AnswerEventEntity", b =>
+                {
+                    b.HasOne("UsabilityFactoryExamQuiz.Model.EF.Models.AnswerEntity", null)
+                        .WithMany("Events")
+                        .HasForeignKey("AnswerEntityId");
+                });
+
             modelBuilder.Entity("UsabilityFactoryExamQuiz.Model.EF.Models.AnswerEntity", b =>
                 {
                     b.Navigation("Attachments");
+
+                    b.Navigation("Events");
                 });
 
             modelBuilder.Entity("UsabilityFactoryExamQuiz.Model.EF.Models.QuestionEntity", b =>

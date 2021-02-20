@@ -15,8 +15,7 @@ namespace UsabilityFactoryExamQuiz.Model.EF.Models.Configuration
             builder.HasKey(f => f.Id);
             builder.HasIndex(f => f.Id).IsUnique();
 
-            builder.Ignore(f => f.Events);
-            //builder.HasMany(f => f.Events);
+            builder.HasMany(f => f.Events);            
             builder.HasMany(f => f.Attachments);
         }
     }

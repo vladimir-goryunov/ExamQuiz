@@ -2,7 +2,19 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Platforms>AnyCPU;x64</Platforms>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\lib\angularjs\**" />
+    <Compile Remove="wwwroot\lib\angularui\**" />
+    <Content Remove="wwwroot\lib\angularjs\**" />
+    <Content Remove="wwwroot\lib\angularui\**" />
+    <EmbeddedResource Remove="wwwroot\lib\angularjs\**" />
+    <EmbeddedResource Remove="wwwroot\lib\angularui\**" />
+    <None Remove="wwwroot\lib\angularjs\**" />
+    <None Remove="wwwroot\lib\angularui\**" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="10.1.1" />
