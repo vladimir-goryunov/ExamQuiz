@@ -6429,11 +6429,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\_Net.Interview\\UsabilityFactoryExamQuiz\\UsabilityFactoryExamQuiz.Utils\\UsabilityFactoryExamQuiz.Utils.csproj",
+      "projectUniqueName": "D:\\Business\\_~ПОИСК РАБОТЫ~_\\_Собеседования\\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\\Source Code\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Utils\\UsabilityFactoryExamQuiz.Utils.csproj",
       "projectName": "UsabilityFactoryExamQuiz.Utils",
-      "projectPath": "D:\\_Net.Interview\\UsabilityFactoryExamQuiz\\UsabilityFactoryExamQuiz.Utils\\UsabilityFactoryExamQuiz.Utils.csproj",
+      "projectPath": "D:\\Business\\_~ПОИСК РАБОТЫ~_\\_Собеседования\\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\\Source Code\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Utils\\UsabilityFactoryExamQuiz.Utils.csproj",
       "packagesPath": "C:\\Users\\Vladimir\\.nuget\\packages\\",
-      "outputPath": "D:\\_Net.Interview\\UsabilityFactoryExamQuiz\\UsabilityFactoryExamQuiz.Utils\\obj\\",
+      "outputPath": "D:\\Business\\_~ПОИСК РАБОТЫ~_\\_Собеседования\\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\\Source Code\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Utils\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Vladimir\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6450,11 +6450,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\_Net.Interview\\UsabilityFactoryExamQuiz\\UsabilityFactoryExamQuiz.Model.EF\\UsabilityFactoryExamQuiz.Model.EF.csproj": {
-              "projectPath": "D:\\_Net.Interview\\UsabilityFactoryExamQuiz\\UsabilityFactoryExamQuiz.Model.EF\\UsabilityFactoryExamQuiz.Model.EF.csproj"
+            "D:\\Business\\_~ПОИСК РАБОТЫ~_\\_Собеседования\\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\\Source Code\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Model.EF\\UsabilityFactoryExamQuiz.Model.EF.csproj": {
+              "projectPath": "D:\\Business\\_~ПОИСК РАБОТЫ~_\\_Собеседования\\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\\Source Code\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Model.EF\\UsabilityFactoryExamQuiz.Model.EF.csproj"
             },
-            "D:\\_Net.Interview\\UsabilityFactoryExamQuiz\\UsabilityFactoryExamQuiz.Model\\UsabilityFactoryExamQuiz.Model.csproj": {
-              "projectPath": "D:\\_Net.Interview\\UsabilityFactoryExamQuiz\\UsabilityFactoryExamQuiz.Model\\UsabilityFactoryExamQuiz.Model.csproj"
+            "D:\\Business\\_~ПОИСК РАБОТЫ~_\\_Собеседования\\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\\Source Code\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Model\\UsabilityFactoryExamQuiz.Model.csproj": {
+              "projectPath": "D:\\Business\\_~ПОИСК РАБОТЫ~_\\_Собеседования\\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\\Source Code\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Model\\UsabilityFactoryExamQuiz.Model.csproj"
             }
           }
         }

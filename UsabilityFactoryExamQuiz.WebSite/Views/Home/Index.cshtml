@@ -5,7 +5,7 @@
 <div class="text-left">
     <h1>REST API</h1>
     <div ng-show="isObjectEmpty(response.answers)">
-        <button onclick="init()">Загрузить ответы</button>
+        <button ng-click="init()">Загрузить ответы</button>
     </div>
     <div ng-show="!isObjectEmpty(response.answers)" style="display:none;">
         <div>
@@ -45,11 +45,13 @@
 </div>
 
 <script>
+    /*
     var init = function () {
         $.post("answers/", function (data) {
             alert(data.data);
         });
     }
+    */
 
     var app = angular.module("QuestionaireManagement", []);
 
@@ -62,7 +64,6 @@
         };
 
         $scope.init = function () {
-            alert('Загрузить ответы');
             $http({
                 method: 'POST',
                 url: 'answers/'
@@ -80,9 +81,6 @@
         }
 
         $scope.saveEvents = function () {
-
-            alert($scope.answer.selected);
-            return;
 
             var eventsJSON = JSON.stringify($scope.answer.events);
 

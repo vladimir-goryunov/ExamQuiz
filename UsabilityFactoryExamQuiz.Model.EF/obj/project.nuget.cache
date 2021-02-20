@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pDpTXBncX/apUZ57LAN4hE//n+2tJ0NcwTH5UAZP4EEqpSRDyEj1GVai0Dsg/rgAi37SbRJu/R4gc9ks7URQIQ==",
+  "dgSpecHash": "hDTrY51AxWIUOoJ+i+277FGUpAI6Yr7iGt7zAIYw/E9JScDNq/pB4fjUxA6Tc+CXz0Q/RB9U4hu8Tgecap3Xhg==",
   "success": true,
-  "projectFilePath": "D:\\_Net.Interview\\UsabilityFactoryExamQuiz\\UsabilityFactoryExamQuiz.Model.EF\\UsabilityFactoryExamQuiz.Model.EF.csproj",
+  "projectFilePath": "D:\\Business\\_~ПОИСК РАБОТЫ~_\\_Собеседования\\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\\Source Code\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Model.EF\\UsabilityFactoryExamQuiz.Model.EF.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Vladimir\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Vladimir\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

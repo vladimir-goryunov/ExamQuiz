@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IofxEPG+zNNljbgMywT/rFVm58C5x4TNAKkSOxdHhAZSwkGp4O1e//KCC3RGPAtiOXlRWdbVfzPBLhx5k8tgXA==",
+  "dgSpecHash": "3FLnf9sSEI6l/5agnjmLlrFuep0EINm5gGWL0yiEBfqT5RbJqJI1X4JBRH9M1iAHs3+SYUPcVch1Mywm8nG33A==",
   "success": true,
-  "projectFilePath": "D:\\_Net.Interview\\UsabilityFactoryExamQuiz\\UsabilityFactoryExamQuiz.WebSite\\UsabilityFactoryExamQuiz.WebSite.csproj",
+  "projectFilePath": "D:\\Business\\_~ПОИСК РАБОТЫ~_\\_Собеседования\\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\\Source Code\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.WebSite\\UsabilityFactoryExamQuiz.WebSite.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Vladimir\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Vladimir\\.nuget\\packages\\azure.core\\1.8.1\\azure.core.1.8.1.nupkg.sha512",

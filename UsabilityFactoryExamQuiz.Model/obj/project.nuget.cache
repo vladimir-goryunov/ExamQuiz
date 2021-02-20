@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EhmIgW3cVH+iJERJdKDx8TKVU3iXVH/4EF80AEwSRf+/w1cDNUhcrLt7T6DHU10cCdVvRGnVph0ZYWDQYqDPUg==",
+  "dgSpecHash": "iLjNGv5QAqsxV9ByiO40fdWJdX3wptEXI8zoXB56miFQ4gupOUx4aFb+ULYY5ItAbCDJtm35MEuX4S4QkBlZyw==",
   "success": true,
-  "projectFilePath": "D:\\_Net.Interview\\UsabilityFactoryExamQuiz\\UsabilityFactoryExamQuiz.Model\\UsabilityFactoryExamQuiz.Model.csproj",
+  "projectFilePath": "D:\\Business\\_~ПОИСК РАБОТЫ~_\\_Собеседования\\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\\Source Code\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Model\\UsabilityFactoryExamQuiz.Model.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Vladimir\\.nuget\\packages\\microsoft.aspnetcore.http\\2.2.2\\microsoft.aspnetcore.http.2.2.2.nupkg.sha512",
     "C:\\Users\\Vladimir\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
