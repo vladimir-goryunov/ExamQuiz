@@ -18,7 +18,7 @@ namespace UsabilityFactoryExamQuiz.WebSite.Controllers
 
         private readonly ILogger _logger;
         private readonly IAnswerRepository _answerRepository;
-        public AnswersController(IAnswerRepository answerRepository, 
+        public AnswersController(IAnswerRepository answerRepository,
                                 ILoggerFactory loggerFactory)
         {
             _answerRepository = answerRepository ?? throw new ArgumentNullException(nameof(answerRepository));
@@ -36,13 +36,14 @@ namespace UsabilityFactoryExamQuiz.WebSite.Controllers
             try
             {
                 var answers = await _answerRepository.GetAll();
-                
+
                 return Ok(answers);
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
                 var errorMessage = $"Ошибка получении списка ответов - {ex.Message}";
                 _logger.LogError(ex.InnerException ?? ex, errorMessage);
-                return StatusCode(InternalServerError, errorMessage); 
+                return StatusCode(InternalServerError, errorMessage);
             }
         }
 
@@ -51,9 +52,9 @@ namespace UsabilityFactoryExamQuiz.WebSite.Controllers
         /// </summary>
         /// <param name="answerId"></param>
         /// <returns></returns>
-        [HttpPost("{answerId}")]
+        [HttpPost, DisableRequestSizeLimit]
         [Route("~/answers/{answerId}/attachments")]
-        public async Task<ActionResult> Attachments(AttachmentModel attachmentModel)
+        public async Task<ActionResult> Attachments([FromForm] AttachmentModel attachmentModel)
         {
             try
             {
@@ -61,7 +62,7 @@ namespace UsabilityFactoryExamQuiz.WebSite.Controllers
                 attachmentModel.Files = Request.Form.Files;
                 await Task.Run(() => _answerRepository.SaveAnswerAttachments(attachmentModel));
 
-                return Ok(); 
+                return Ok("Список вложений успешно сохранён");
             }
             catch (AnswerNotFoundException)
             {

@@ -29,7 +29,8 @@ namespace UsabilityFactoryExamQuiz.Utils.Repositories
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        private AnswerEntity GetAnswerById(Guid id) {
+        private AnswerEntity GetAnswerById(Guid id)
+        {
             return _dbContext.Answers.FirstOrDefault(u => u.Id.Equals(id));
         }
 
@@ -65,7 +66,8 @@ namespace UsabilityFactoryExamQuiz.Utils.Repositories
                 _attachmentRepository.SaveFiles(attachmentModel.Files);
                 _dbContext.SaveChanges(); // Обновляем answer после добавления аттачей
             }
-            catch (Exception ex) { 
+            catch (Exception ex)
+            {
                 // Rollback all files!!!
             }
 
@@ -76,7 +78,7 @@ namespace UsabilityFactoryExamQuiz.Utils.Repositories
             Guid answerId = eventModel != null ? eventModel.AnswerId : throw new AnswerNotFoundException();
             var answer = GetAnswerById(answerId);
             if (answer == null) throw new AnswerNotFoundException();
-                        
+
 
             /*
             // Вставка тестовой дочерней записи
@@ -109,7 +111,7 @@ namespace UsabilityFactoryExamQuiz.Utils.Repositories
 
         public async Task<IEnumerable<AnswerEntity>> GetAll()
         {
-            return await _dbContext.Answers.ToListAsync(); 
+            return await _dbContext.Answers.ToListAsync();
         }
 
         /*
