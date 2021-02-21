@@ -14,7 +14,7 @@ namespace UsabilityFactoryExamQuiz.Model.DataContract
         /// <summary>
         /// Строка JSON c массивом событий
         /// </summary>
-        public String AnswerEventJSON { get; set; }
+        public String AnswerEventsJSON { get; set; }
 
         /// <summary>
         /// Массив событий, приложенные к ответу
@@ -36,9 +36,9 @@ namespace UsabilityFactoryExamQuiz.Model.DataContract
             AnswerId = answerId;
         }
 
-        public EventModel(Guid answerId, String answerEventJSON) {
+        public EventModel(Guid answerId, String answerEventsJSON) {
             AnswerId = answerId;
-            AnswerEventJSON = answerEventJSON;
+            AnswerEventsJSON = answerEventsJSON;
         }
     }
 }

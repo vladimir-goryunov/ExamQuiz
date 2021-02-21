@@ -1,0 +1,154 @@
+﻿@{
+    ViewData["Title"] = "REST API";
+}
+
+<div class="text-left">
+    <h1>REST API</h1>
+    <div ng-show="isObjectEmpty(response.answers)">
+        <button ng-click="init()">Загрузить ответы</button>
+    </div>
+    <div ng-show="!isObjectEmpty(response.answers)" style="display:none;">
+        <div>
+            <label for="answers">Выбранный ответ:</label>
+            <select id="answers" name="answers" ng-model="answer.selected" ng-change="answerSelected()">
+                <option value="{{answer.id}}" ng-repeat="answer in response.answers">{{answer.id}}&nbsp;&nbsp;&nbsp;{{answer.text}}</option>
+            </select>
+        </div>
+    </div>
+
+    <div ng-show="!isObjectEmpty(response.answers)" style="display:none;">
+        <h2>События&nbsp;&nbsp;&nbsp;<button ng-show="answer.selected != ''" ng-click="saveEvents()" style="cursor:pointer;font-weight:bold;font-size:medium;">Сохранить</button></h2>
+        <div ng-show="answer.selected == ''">
+            Пожалуйста, выберите ответ для создания тестового набора событий...
+        </div>
+        <div ng-show="answer.selected != ''">
+            <table style="background-color:floralwhite;border:2px solid;border-color:gainsboro;" cellpadding="5" cellspacing="5">
+                <tr>
+                    <th>ID</th>
+                    <th>Type</th>
+                    <th>Value</th>
+                    <th>Client Time</th>
+                </tr>
+                <tr ng-repeat="event in answer.events">
+                    <td style="color: blue">{{event.id}}</td>
+                    <td style="color: blue">{{event.type}}</td>
+                    <td style="color: blue">{{event.value}}</td>
+                    <td style="color: blue">{{event.clientTime}}</td>
+                </tr>
+            </table>
+        </div>
+        <h2>Файлы вложений</h2>
+        <div>
+            <span ng-click="saveAttachments()" style="cursor:pointer;">Сохранить файлы вложений</span>
+        </div>
+    </div>
+</div>
+
+<script>
+    /*
+    var init = function () {
+        $.post("answers/", function (data) {
+            alert(data.data);
+        });
+    }
+    */
+
+    var app = angular.module("QuestionaireManagement", []);
+
+    app.controller("QuestionaireController", function ($scope, $http) {
+
+        $scope.response = {
+            title: "",
+            text: "",
+            answers: []
+        };
+
+        $scope.init = function () {
+            $http({
+                method: 'POST',
+                url: 'answers/'
+            }).then(
+                function (res) { // success
+                    var response = res.data;
+                    $scope.response.title = response.title;
+                    $scope.response.text = response.text;
+                    $scope.response.answers = response.data;
+                },
+                function (res) { // error
+                    alert("Error: " + res.status + " : " + res.data);
+                }
+            );
+        }
+
+        $scope.saveEvents = function () {
+
+            var eventsJSON = JSON.stringify($scope.answer.events);
+
+            $http({
+                method: 'POST',
+                type: 'application/json',
+                contentType: 'application/json',
+                url: 'answers/' + $("#answers").val() + '/events',
+                data: { AnswerId: $("#answers").val(), AnswerEventJSON: eventsJSON }
+            }).then(
+                function (res) { // success
+                    $scope.response = res.data;
+                    alert($scope.response.data);
+                },
+                function (res) { // error
+                    console.log("Error: " + res.status + " : " + res.data);
+                    alert("Error: " + res.status + " : " + res.data);
+                }
+            );
+
+            /*
+            // Рабочий вариант
+            $http({
+                method: 'POST',
+                type: 'application/json',
+                contentType: 'application/json',
+                url: 'answers/' + $("#answers").val() + '/events',
+                data: { AnswerId:'72C02B2A-5814-40FF-9075-B3E8C3CA5D59', AnswerEventJSON:'Value=500' }
+            }).then(
+                function (res) { // success
+                    $scope.response = res.data;
+                    alert($scope.response.data);
+                },
+                function (res) { // error
+                    console.log("Error: " + res.status + " : " + res.data);
+                    alert("Error: " + res.status + " : " + res.data);
+                }
+            );
+            */
+        }
+
+
+        $scope.answer = {
+            selected: '',
+            events: []
+        };
+
+        $scope.answerSelected = function () {
+
+            $http({
+                method: 'POST',
+                type: 'application/json',
+                contentType: 'application/json',
+                url: 'answers/' + $("#answers").val() + '/randomevents',
+                data: { answerId: $("#answers").val() }
+            }).then(
+                function (res) { // success
+                    $scope.answer.events = res.data;
+                },
+                function (res) { // error
+                    alert("Error: " + res.status + " : " + res.data);
+                }
+            );
+        }
+
+        $scope.isObjectEmpty = function (entry) {
+            return Object.keys(entry).length === 0;
+        }
+
+    });
+</script>

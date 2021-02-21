@@ -1,130 +1,112 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using System;
-using System.Net;
-using System.Linq;
 using System.Threading.Tasks;
 using UsabilityFactoryExamQuiz.Utils.Repositories.Interfaces;
-using UsabilityFactoryExamQuiz.Utils.Responses;
 using UsabilityFactoryExamQuiz.Utils.Exceptions;
 using UsabilityFactoryExamQuiz.Model.DataContract;
 using System.Collections.Generic;
 using UsabilityFactoryExamQuiz.Model.EF.Models;
-using UsabilityFactoryExamQuiz.Model.BusinessLogic;
-using UsabilityFactoryExamQuiz.Utils.Helpers;
+
 
 namespace UsabilityFactoryExamQuiz.WebSite.Controllers
 {
     [ApiController]
     public class AnswersController : ControllerBase
     {
+        private const int InternalServerError = (int)System.Net.HttpStatusCode.InternalServerError;
+
+        private readonly ILogger _logger;
         private readonly IAnswerRepository _answerRepository;
-        public AnswersController(IAnswerRepository answerRepository)
+        public AnswersController(IAnswerRepository answerRepository, 
+                                ILoggerFactory loggerFactory)
         {
-            _answerRepository = answerRepository;
+            _answerRepository = answerRepository ?? throw new ArgumentNullException(nameof(answerRepository));
+            _logger = loggerFactory?.CreateLogger(nameof(AnswersController)) ?? throw new ArgumentNullException(nameof(loggerFactory));
         }
 
-        [HttpPost]
+        /// <summary>
+        /// Получает список всех ответов
+        /// </summary>
+        /// <returns>Список ответов</returns>
+        [HttpGet]
         [Route("~/answers")]
-        public async Task<ResponseMessage<List<AnswerEntity>>> Get()
+        public async Task<ActionResult<List<AnswerEntity>>> Get()
         {
             try
             {
                 var answers = await _answerRepository.GetAll();
-                if (!answers.Any())
-                {
-                    _answerRepository.CreateTestDataSet();
-                    answers = await _answerRepository.GetAll();
-                }
-
-                return new ResponseMessage<List<AnswerEntity>>("Информация", "Список текстов ответов")
-                {
-                    Data = answers.ToList()
-                };
+                
+                return Ok(answers);
             }
-            catch (Exception ex)
-            {
-                //_logger.LogError(ex.InnerException ?? ex, $"Ошибка при получении списка ответов.");
-                return new ResponseMessage<List<AnswerEntity>>("Ошибка",
-                                            $"Ошибка при получении списка ответов - {ex.Message}",
-                                            ex.ToString(),
-                                            (int)HttpStatusCode.InternalServerError);
+            catch (Exception ex) {
+                var errorMessage = $"Ошибка получении списка ответов - {ex.Message}";
+                _logger.LogError(ex.InnerException ?? ex, errorMessage);
+                return StatusCode(InternalServerError, errorMessage); 
             }
-        }
-
-        private ResponseMessage<String> Print(String value)
-        {
-            return new ResponseMessage<String>("Information", value);
         }
 
         /// <summary>
-        /// Сохранить файлы вложений в виде блобов в хранилище Azure Storage в контейнере attachments 
-        /// и создать соответствующие записи в SQL базе в таблице AnswerAttachments
+        /// Сохраняеть файлы вложений
         /// </summary>
         /// <param name="answerId"></param>
         /// <returns></returns>
         [HttpPost("{answerId}")]
         [Route("~/answers/{answerId}/attachments")]
-        public async Task<ResponseMessage<String>> Attachments(AttachmentModel attachmentModel)
+        public async Task<ActionResult> Attachments(AttachmentModel attachmentModel)
         {
             try
             {
+                if (attachmentModel == null) return BadRequest("Список вложений не определён");
                 attachmentModel.Files = Request.Form.Files;
-                _answerRepository.SaveAnswerAttachments(attachmentModel);
+                await Task.Run(() => _answerRepository.SaveAnswerAttachments(attachmentModel));
+
+                return Ok(); 
             }
-            catch (AnswerNotFoundException ex)
+            catch (AnswerNotFoundException)
             {
-                // Учесть этот кейс
+                var errorMessage = $"Ошибка при сохранении списка вложений. Указанный ответ (answerId={attachmentModel.AnswerId}), к которому относятся вложения, не найден в системе.";
+                _logger.LogError(errorMessage);
+                return NotFound(errorMessage);
             }
             catch (Exception ex)
             {
-                return new ResponseMessage<String>("Ошибка",
-                                            $"Ошибка при сохранении списка вложений - {ex.Message}",
-                                            ex.ToString(),
-                                            (int)HttpStatusCode.InternalServerError);
+                var errorMessage = $"Ошибка при сохранении списка вложений - {ex.Message}";
+                _logger.LogError(ex.InnerException ?? ex, errorMessage);
+                return StatusCode(InternalServerError, errorMessage);
             }
 
-            return await Task.Run(() => Print("Список вложений успешно сохранён"));
         }
 
         /// <summary>
-        /// Сохранить события в SQL базе данных в таблице AnswerEvents
+        /// Сохраняет события
         /// </summary>
         /// <param name="answerId"></param>
-        /// <example>
-        /// Для тестирования использовать в PowerShell команду
-        /// Invoke-RestMethod http://localhost:22772/answers/2B75C2A4-A691-4706-9B2A-38301B131025/events -Method POST -Body (@{AnswerId = "2B75C2A4-A691-4706-9B2A-38301B131025"; AnswerEventJSON = "Value=500"} | ConvertTo-Json) -ContentType "application/json; charset=utf-8"
-        /// </example>
         /// <returns></returns>
         [HttpPost("{answerId}")]
         [Route("~/answers/{answerId}/events")]
-        public async Task<ResponseMessage<String>> Events(EventModel eventModel)
+        // [FromForm] EventModel eventModel
+        public async Task<ActionResult> Events([FromForm] EventModel eventModel)
         {
             try
             {
-                _answerRepository.SaveAnswerEvents(eventModel);
+                if (eventModel == null) return BadRequest("Список событий не определён");
+                await Task.Run(() => _answerRepository.SaveAnswerEvents(eventModel));
+
+                return Ok();
             }
-            catch (AnswerNotFoundException ex)
+            catch (AnswerNotFoundException)
             {
-                // Учесть этот кейс
+                var errorMessage = $"Ошибка при сохранении списка событий. Ответ (answerId={eventModel.AnswerId}), к которому относятся события, не найден в системе.";
+                _logger.LogError(errorMessage);
+                return NotFound(errorMessage);
             }
             catch (Exception ex)
             {
-                return new ResponseMessage<String>("Ошибка",
-                                            $"Ошибка при сохранении списка событий - {ex.Message}",
-                                            ex.ToString(),
-                                            (int)HttpStatusCode.InternalServerError);
+                var errorMessage = $"Ошибка при сохранении списка событий - {ex.Message}";
+                _logger.LogError(ex.InnerException ?? ex, errorMessage);
+                return StatusCode(InternalServerError, errorMessage);
             }
-
-            return await Task.Run(() => Print("Список событий успешно сохранён"));
-        }
-
-
-
-        [HttpPost("{answerId}")]
-        [Route("~/answers/{answerId}/randomevents")]
-        public async Task<List<AnswerEventEntity>> RandomEvents(Guid answerId)
-        {
-            return await Task.Run(() => DataGeneratorHelper.GenerateEvents(answerId));
         }
     }
 }
