@@ -85,7 +85,7 @@ namespace UsabilityFactoryExamQuiz.WebSite.Controllers
         /// <returns></returns>
         [HttpPost("{answerId}")]
         [Route("~/answers/{answerId}/events")]
-        // [FromForm] EventModel eventModel
+        [Produces("application/json")]
         public async Task<ActionResult> Events([FromForm] EventModel eventModel)
         {
             try
@@ -93,7 +93,7 @@ namespace UsabilityFactoryExamQuiz.WebSite.Controllers
                 if (eventModel == null) return BadRequest("Список событий не определён");
                 await Task.Run(() => _answerRepository.SaveAnswerEvents(eventModel));
 
-                return Ok();
+                return Ok("Список событий успешно сохранён");
             }
             catch (AnswerNotFoundException)
             {

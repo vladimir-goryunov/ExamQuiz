@@ -7,72 +7,59 @@
     <button onclick="init()">Загрузить ответы</button>
 
     <div>
-        <form action="answers/A894B675-DAD5-4EF0-BA1F-0893265CD5F3/events"  method="post">
-            <label for="answers">Выбранный ответ:</label>
-            <select id="answers" name="answers">
-                <option value="A894B675-DAD5-4EF0-BA1F-0893265CD5F3">A894B675-DAD5-4EF0-BA1F-0893265CD5F3</option>
-                <option value="68F3CB6B-CDB5-4E00-B5B3-99DE07F7CEE4">68F3CB6B-CDB5-4E00-B5B3-99DE07F7CEE4</option>
-                <option value="92429BE6-4434-4C13-8C31-D807785FF4AD">92429BE6-4434-4C13-8C31-D807785FF4AD</option>
-            </select>
-            <table>
-                <tr>
-                    <td>AnswerId: </td>
-                    <td><input type="text" id="AnswerId" name="AnswerId" /></td>
-                </tr>
-                <tr>
-                    <td>AnswerEventsJSON: </td>
-                    <td><input type="text" id="AnswerEventsJSON" name="AnswerEventsJSON" /></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>
-                        <button onclick="saveEvents()">saveEvents</button>
-                        <br/>
-                        <input type="submit" name="submit" value="Submit" />
-                    </td>
-
-                </tr>
-            </table>
-        </form>
+        <label for="answers">Выбранный ответ:</label>
+        <select id="answers" name="answers">
+            <option value="A894B675-DAD5-4EF0-BA1F-0893265CD5F3">A894B675-DAD5-4EF0-BA1F-0893265CD5F3</option>
+            <option value="68F3CB6B-CDB5-4E00-B5B3-99DE07F7CEE4">68F3CB6B-CDB5-4E00-B5B3-99DE07F7CEE4</option>
+            <option value="92429BE6-4434-4C13-8C31-D807785FF4AD">92429BE6-4434-4C13-8C31-D807785FF4AD</option>
+        </select>
+        <table>
+            <tr>
+                <td>AnswerId: </td>
+                <td><input type="text" id="AnswerId" name="AnswerId" value="A894B675-DAD5-4EF0-BA1F-0893265CD5F3" /></td>
+            </tr>
+            <tr>
+                <td>AnswerEventsJSON: </td>
+                <td><input type="text" id="AnswerEventsJSON" name="AnswerEventsJSON" value="QWERTY" /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button onclick="saveEvents()">Save Events</button>
+                </td>
+            </tr>
+        </table>
     </div>
 
 </div>
 
 <script>
-    
+
+    var saveEvents = function () {
+
+        var url = 'answers/' + $('#AnswerId').val() + '/events';
+
+        var data = {
+            AnswerId: $('#AnswerId').val(),
+            AnswerEventsJSON: $('#AnswerEventsJSON').val()
+        }
+
+        $.ajax({
+            type: 'POST',
+            url: url,
+            dataType: 'json',
+            contentType: 'application/x-www-form-urlencoded; charset=utf-8',
+            data: data
+        }).done(function (data) {
+            alert(data);
+        }).fail(function (jqXHR, textStatus, errorThrown) {
+            alert(jqXHR.statusText + ': ' + jqXHR.responseText);
+        });
+    }
+
     var init = function () {
         $.get("answers/", function (data) {
             alert(data);
-        });
-    }
-
-    var saveEvents = function () {
-        var eventsJSON = JSON.stringify({ AnswerId: 'QWERTY', AnswerEventJSON: '12345' });
-        var url = 'answers/' + $('#answers').val() + '/events';
-        $.ajax({
-            type: "POST",
-            url: url,
-            contentType: "application/json",
-            //data: { AnswerId: 'QWERTY', AnswerEventJSON: '12345' },
-            data: { eventModel: eventsJSON },            
-            dataType: "json",
-        }).done(function () {
-            $(this).addClass("done");
-        });
-    }
-
-
-    var saveEventsWorkable = function () {
-        var eventsJSON = "Value=500"; //JSON.stringify($scope.answer.events);
-        var url = 'answers/' + $('#answers').val() + '/events';
-        $.ajax({
-            type: "POST",
-            url: url,
-            data: { AnswerId: $('#answers').val(), AnswerEventJSON: eventsJSON },
-            dataType: 'application/json',
-            contentType: 'application/json'
-        }).done(function () {
-            $(this).addClass("done");
         });
     }
 </script>
