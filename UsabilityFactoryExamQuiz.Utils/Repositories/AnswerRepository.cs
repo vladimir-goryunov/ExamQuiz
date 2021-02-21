@@ -22,8 +22,6 @@ namespace UsabilityFactoryExamQuiz.Utils.Repositories
         {
             _dbContext = context;
             _attachmentRepository = attachmentRepository;
-
-            //CreateTestDataSet();
         }
 
         /// <summary>
@@ -31,14 +29,14 @@ namespace UsabilityFactoryExamQuiz.Utils.Repositories
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        private AnswerEntity GetAnswer(Guid id) {
+        private AnswerEntity GetAnswerById(Guid id) {
             return _dbContext.Answers.FirstOrDefault(u => u.Id.Equals(id));
         }
 
         public void SaveAnswerAttachments(AttachmentModel attachmentModel)
         {
             Guid answerId = attachmentModel != null ? attachmentModel.AnswerId : throw new AnswerNotFoundException();
-            AnswerEntity answer = GetAnswer(answerId);
+            AnswerEntity answer = GetAnswerById(answerId);
             if (answer == null) throw new AnswerNotFoundException();
 
             var files = attachmentModel.Files.ToList();
@@ -76,7 +74,7 @@ namespace UsabilityFactoryExamQuiz.Utils.Repositories
         public void SaveAnswerEvents(EventModel eventModel)
         {
             Guid answerId = eventModel != null ? eventModel.AnswerId : throw new AnswerNotFoundException();
-            var answer = GetAnswer(answerId);
+            var answer = GetAnswerById(answerId);
             if (answer == null) throw new AnswerNotFoundException();
                         
 
@@ -111,10 +109,10 @@ namespace UsabilityFactoryExamQuiz.Utils.Repositories
 
         public async Task<IEnumerable<AnswerEntity>> GetAll()
         {
-            var entities = await _dbContext.Answers.ToListAsync();
-            return entities;
+            return await _dbContext.Answers.ToListAsync(); 
         }
 
+        /*
         public void CreateTestDataSet() {
             var answer1Id = Guid.NewGuid();
             var answer2Id = Guid.NewGuid();
@@ -198,6 +196,7 @@ namespace UsabilityFactoryExamQuiz.Utils.Repositories
             }
 
         }
+        */
 
     }
 }

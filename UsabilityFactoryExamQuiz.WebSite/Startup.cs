@@ -12,22 +12,27 @@ using UsabilityFactoryExamQuiz.Model.EF;
 using UsabilityFactoryExamQuiz.Utils.Helpers;
 using UsabilityFactoryExamQuiz.Utils.Repositories;
 using UsabilityFactoryExamQuiz.Utils.Repositories.Interfaces;
+using Microsoft.Extensions.Logging;
 
 namespace UsabilityFactoryExamQuiz.WebSite
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration, ILoggerFactory loggerFactory)
         {
             Configuration = configuration;
+            LoggerFactory = loggerFactory;
         }
 
         public IConfiguration Configuration { get; }
+        public ILoggerFactory LoggerFactory { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddLogging(logging => logging.AddDebug());
+
             AddDb(services);
         }
 

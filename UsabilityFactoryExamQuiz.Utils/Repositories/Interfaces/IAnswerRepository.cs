@@ -24,7 +24,6 @@ namespace UsabilityFactoryExamQuiz.Utils.Repositories.Interfaces
         /// <returns></returns>
         public void SaveAnswerEvents(EventModel eventModel);
 
-        public void CreateTestDataSet();
 
     }
 }

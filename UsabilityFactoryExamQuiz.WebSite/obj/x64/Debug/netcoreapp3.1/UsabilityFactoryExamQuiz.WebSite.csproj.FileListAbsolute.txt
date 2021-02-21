@@ -340,6 +340,7 @@ D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрик
 D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\Source Code\UsabilityFactoryExamQuiz\UsabilityFactoryExamQuiz.WebSite\obj\x64\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.WebSite.dll
 D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\Source Code\UsabilityFactoryExamQuiz\UsabilityFactoryExamQuiz.WebSite\obj\x64\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.WebSite.pdb
 D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\Source Code\UsabilityFactoryExamQuiz\UsabilityFactoryExamQuiz.WebSite\obj\x64\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.WebSite.genruntimeconfig.cache
+D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\Source Code\git\ExamQuiz\UsabilityFactoryExamQuiz.WebSite\bin\x64\Debug\netcoreapp3.1\log4net.config
 D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\Source Code\git\ExamQuiz\UsabilityFactoryExamQuiz.WebSite\bin\x64\Debug\netcoreapp3.1\appsettings.Development.json
 D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\Source Code\git\ExamQuiz\UsabilityFactoryExamQuiz.WebSite\bin\x64\Debug\netcoreapp3.1\appsettings.json
 D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\Source Code\git\ExamQuiz\UsabilityFactoryExamQuiz.WebSite\bin\x64\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.WebSite.exe
@@ -356,6 +357,7 @@ D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрик
 D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\Source Code\git\ExamQuiz\UsabilityFactoryExamQuiz.WebSite\bin\x64\Debug\netcoreapp3.1\Azure.Storage.Common.dll
 D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\Source Code\git\ExamQuiz\UsabilityFactoryExamQuiz.WebSite\bin\x64\Debug\netcoreapp3.1\Castle.Core.dll
 D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\Source Code\git\ExamQuiz\UsabilityFactoryExamQuiz.WebSite\bin\x64\Debug\netcoreapp3.1\Humanizer.dll
+D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\Source Code\git\ExamQuiz\UsabilityFactoryExamQuiz.WebSite\bin\x64\Debug\netcoreapp3.1\log4net.dll
 D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\Source Code\git\ExamQuiz\UsabilityFactoryExamQuiz.WebSite\bin\x64\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
 D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\Source Code\git\ExamQuiz\UsabilityFactoryExamQuiz.WebSite\bin\x64\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
 D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\Source Code\git\ExamQuiz\UsabilityFactoryExamQuiz.WebSite\bin\x64\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
@@ -374,6 +376,7 @@ D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрик
 D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\Source Code\git\ExamQuiz\UsabilityFactoryExamQuiz.WebSite\bin\x64\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
 D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\Source Code\git\ExamQuiz\UsabilityFactoryExamQuiz.WebSite\bin\x64\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
 D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\Source Code\git\ExamQuiz\UsabilityFactoryExamQuiz.WebSite\bin\x64\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\Source Code\git\ExamQuiz\UsabilityFactoryExamQuiz.WebSite\bin\x64\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
 D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\Source Code\git\ExamQuiz\UsabilityFactoryExamQuiz.WebSite\bin\x64\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.FileExtensions.dll
 D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\Source Code\git\ExamQuiz\UsabilityFactoryExamQuiz.WebSite\bin\x64\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Json.dll
 D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\Source Code\git\ExamQuiz\UsabilityFactoryExamQuiz.WebSite\bin\x64\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
@@ -383,6 +386,7 @@ D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрик
 D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\Source Code\git\ExamQuiz\UsabilityFactoryExamQuiz.WebSite\bin\x64\Debug\netcoreapp3.1\Microsoft.Extensions.FileSystemGlobbing.dll
 D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\Source Code\git\ExamQuiz\UsabilityFactoryExamQuiz.WebSite\bin\x64\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
 D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\Source Code\git\ExamQuiz\UsabilityFactoryExamQuiz.WebSite\bin\x64\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\Source Code\git\ExamQuiz\UsabilityFactoryExamQuiz.WebSite\bin\x64\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
 D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\Source Code\git\ExamQuiz\UsabilityFactoryExamQuiz.WebSite\bin\x64\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
 D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\Source Code\git\ExamQuiz\UsabilityFactoryExamQuiz.WebSite\bin\x64\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
 D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\Source Code\git\ExamQuiz\UsabilityFactoryExamQuiz.WebSite\bin\x64\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
@@ -498,6 +502,7 @@ D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрик
 D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\Source Code\git\ExamQuiz\UsabilityFactoryExamQuiz.WebSite\obj\x64\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.WebSite.TagHelpers.output.cache
 D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\Source Code\git\ExamQuiz\UsabilityFactoryExamQuiz.WebSite\obj\x64\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.WebSite.RazorCoreGenerate.cache
 D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\Source Code\git\ExamQuiz\UsabilityFactoryExamQuiz.WebSite\obj\x64\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\Source Code\git\ExamQuiz\UsabilityFactoryExamQuiz.WebSite\obj\x64\Debug\netcoreapp3.1\Razor\Views\Home\IndexSPA.cshtml.g.cs
 D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\Source Code\git\ExamQuiz\UsabilityFactoryExamQuiz.WebSite\obj\x64\Debug\netcoreapp3.1\Razor\Views\Home\TaskDescription.cshtml.g.cs
 D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\Source Code\git\ExamQuiz\UsabilityFactoryExamQuiz.WebSite\obj\x64\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\Source Code\git\ExamQuiz\UsabilityFactoryExamQuiz.WebSite\obj\x64\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
