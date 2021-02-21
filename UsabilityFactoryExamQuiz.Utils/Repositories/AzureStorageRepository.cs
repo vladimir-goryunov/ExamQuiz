@@ -33,10 +33,12 @@ namespace UsabilityFactoryExamQuiz.Utils.Repositories
             return path;
         }
 
-        private BlobContainerClient BlobContainer {
-            get 
+        private BlobContainerClient BlobContainer
+        {
+            get
             {
-                if (container == null) {
+                if (container == null)
+                {
                     container = new BlobContainerClient(connectionString, containerName);
                     container.CreateIfNotExists();
                 }
@@ -47,22 +49,17 @@ namespace UsabilityFactoryExamQuiz.Utils.Repositories
 
         public void SaveFiles(IEnumerable<IFormFile> files)
         {
-            System.Diagnostics.Debug.WriteLine("Stub method()!!!. File added to Azure...");
-            return;
+            foreach (var file in files)
+            {
+                using (var stream = file.OpenReadStream())
+                {
+                    string blobName = Guid.NewGuid().ToString("N") + file.FileName;
+                    BlobClient blob = BlobContainer.GetBlobClient(blobName);
+                    blob.Upload(stream);
 
-            foreach (var file in files) {
-                string blobName = Randomize("attachment");
-                string filePath = "C:\\temp\\file.txt";// CreateTempFile(SampleFileContent);
-
-                BlobClient blob = BlobContainer.GetBlobClient(blobName);
-                // Upload local file
-                blob.Upload(filePath);
-
-                System.Diagnostics.Debug.WriteLine(blob.Name + " added to Azure...");
+                    System.Diagnostics.Debug.WriteLine(blob.Name + " added to Azure...");
+                }
             }
-
-            
         }
-
     }
 }

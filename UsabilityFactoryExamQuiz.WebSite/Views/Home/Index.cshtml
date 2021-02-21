@@ -2,17 +2,29 @@
     ViewData["Title"] = "REST API";
 }
 
+<style>
+    .red {
+        color: red;
+    }
+</style>
+
 <div class="text-left">
     <h1>REST API</h1>
     <button onclick="init()">Загрузить ответы</button>
 
     <div>
+        <!--
         <label for="answers">Выбранный ответ:</label>
         <select id="answers" name="answers">
             <option value="A894B675-DAD5-4EF0-BA1F-0893265CD5F3">A894B675-DAD5-4EF0-BA1F-0893265CD5F3</option>
             <option value="68F3CB6B-CDB5-4E00-B5B3-99DE07F7CEE4">68F3CB6B-CDB5-4E00-B5B3-99DE07F7CEE4</option>
             <option value="92429BE6-4434-4C13-8C31-D807785FF4AD">92429BE6-4434-4C13-8C31-D807785FF4AD</option>
         </select>
+        -->
+        Answers:
+        <input type="text" id="answers" />
+
+        <h2>Events</h2>
         <table>
             <tr>
                 <td>AnswerId: </td>
@@ -29,6 +41,31 @@
                 </td>
             </tr>
         </table>
+
+        <h2>Attachments</h2>
+        <form id="uploader">
+            <div class="row">
+                <div class="col-sm-6">
+                    AnswerId: <input type="text" id="txtuploader" value="68F3CB6B-CDB5-4E00-B5B3-99DE07F7CEE4" />
+                    <br />
+                    <br />
+                    <input id="fileInput" type="file" multiple>
+                    <br />
+                    <br />
+                    <table class="table" id="FilesList" style="visibility:hidden">
+                        <tr>
+                            <th>
+                                Attachment(s)
+                            </th>
+                            <th>
+                                Action
+                            </th>
+                        </tr>
+                    </table>
+                    <input type="button" id="btnupload" value="Upload" style="float:right" />
+                </div>
+            </div>
+        </form>
     </div>
 
 </div>
@@ -59,7 +96,71 @@
 
     var init = function () {
         $.get("answers/", function (data) {
-            alert(data);
+            var answerData = '';
+            for (var i = 0; i < data.length; i++) {
+                var answer = data[i];
+                answerData += answer.id + " | ";
+            }
+            $('#answers').val(answerData)
         });
+    }
+</script>
+
+<script>
+    var formdata = new FormData(); //FormData object
+    $(document).ready(function () {
+
+        $("#fileInput").on("change", function () {
+            var fileInput = document.getElementById('fileInput');
+            for (i = 0; i < fileInput.files.length; i++) {
+
+                var sfilename = fileInput.files[i].name;
+                let srandomid = Math.random().toString(36).substring(7);
+
+                formdata.append(sfilename, fileInput.files[i]);
+
+                var markup = "<tr id='" + srandomid + "'><td>" + sfilename + "</td><td><a href='#' onclick='DeleteFile(\"" + srandomid + "\",\"" + sfilename +
+                    "\")'><span class='glyphicon glyphicon-remove red'></span></a></td></tr>"; // Binding the file name
+                $("#FilesList tbody").append(markup);
+
+            }
+            chkatchtbl();
+            $('#fileInput').val('');
+        });
+
+        var url = 'answers/68F3CB6B-CDB5-4E00-B5B3-99DE07F7CEE4/attachments';
+
+        $("#btnupload").click(function () {
+            formdata.append('uploadername', $('#txtuploader').val());
+            formdata.append('AnswerId', $('#txtuploader').val());
+
+            $.ajax({
+                type: 'POST',
+                url: url,
+                contentType: false,
+                processData: false,
+                data: formdata,
+                success: function (result) {
+                    if (result != "") {
+                        alert(result);
+                    }
+                },
+                error: function (err) {
+                    alert(err.statusText);
+                }
+            });
+        });
+    });
+    function DeleteFile(Fileid, FileName) {
+        formdata.delete(FileName)
+        $("#" + Fileid).remove();
+        chkatchtbl();
+    }
+    function chkatchtbl() {
+        if ($('#FilesList tr').length > 1) {
+            $("#FilesList").css("visibility", "visible");
+        } else {
+            $("#FilesList").css("visibility", "hidden");
+        }
     }
 </script>
