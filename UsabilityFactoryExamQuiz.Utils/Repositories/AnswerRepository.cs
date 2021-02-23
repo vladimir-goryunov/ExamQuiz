@@ -10,6 +10,7 @@ using UsabilityFactoryExamQuiz.Model.EF.Models;
 using UsabilityFactoryExamQuiz.Utils.Exceptions;
 using UsabilityFactoryExamQuiz.Utils.Helpers;
 using UsabilityFactoryExamQuiz.Utils.Repositories.Interfaces;
+using Microsoft.Extensions.Logging;
 
 namespace UsabilityFactoryExamQuiz.Utils.Repositories
 {
@@ -17,11 +18,15 @@ namespace UsabilityFactoryExamQuiz.Utils.Repositories
     {
         private readonly IQuestionaireDBContext _dbContext;
         private readonly IFileRepository _attachmentRepository;
+        private readonly ILogger _logger;
 
-        public AnswerRepository(IQuestionaireDBContext context, IFileRepository attachmentRepository)
+        public AnswerRepository(IQuestionaireDBContext context, 
+                                IFileRepository attachmentRepository,
+                                ILoggerFactory loggerFactory)
         {
             _dbContext = context;
             _attachmentRepository = attachmentRepository;
+            _logger = loggerFactory?.CreateLogger(nameof(AnswerRepository)) ?? throw new ArgumentNullException(nameof(loggerFactory));            
         }
 
         /// <summary>
@@ -53,23 +58,20 @@ namespace UsabilityFactoryExamQuiz.Utils.Repositories
                         FileName = file.FileName,
                         Size = file.Length > int.MaxValue ? int.MaxValue : (int)file.Length
                     };
-                    answer.Attachments.Add(attachment);
+                    try
+                    {
+                        var fileName = attachment.Id.ToString() + Path.GetExtension(file.FileName);
+                        _attachmentRepository.SaveFile(fileName, file);
+                        answer.Attachments.Add(attachment);
+                    }
+                    catch (Exception ex)
+                    {
+                        var errorMessage = $"Невозможно сохранить вложение для attachmentId={attachment.Id}. Ошибка при сохранении файла в Azure Storage - {ex.Message}";
+                        _logger.LogError(ex.InnerException ?? ex, errorMessage);
+                    }
                 }
-                else
-                {
-                    files.Remove(file);
-                }
             }
-
-            try
-            {
-                _attachmentRepository.SaveFiles(attachmentModel.Files);
-                _dbContext.SaveChanges(); // Обновляем answer после добавления аттачей
-            }
-            catch (Exception ex)
-            {
-                // Rollback all files!!!
-            }
+            _dbContext.SaveChanges(); // Обновляем answer после добавления аттачей
 
         }
 

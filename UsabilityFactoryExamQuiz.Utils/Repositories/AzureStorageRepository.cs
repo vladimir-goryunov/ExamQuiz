@@ -13,25 +13,10 @@ namespace UsabilityFactoryExamQuiz.Utils.Repositories
 {
     public class AzureStorageRepository : IFileRepository
     {
-        private BlobContainerClient container;
+        private static BlobContainerClient container;
 
         string connectionString = "DefaultEndpointsProtocol=http;AccountName=devstoreaccount1;AccountKey=Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==;BlobEndpoint=http://127.0.0.1:10000/devstoreaccount1;QueueEndpoint=http://127.0.0.1:10001/devstoreaccount1;TableEndpoint=http://127.0.0.1:10001/devstoreaccount1;";
         string containerName = "attachments";
-
-        protected const string SampleFileContent = @"Тестовый текст. Lorem ipsum dolor sit amet";
-
-        static string CreateTempPath(string extension = ".txt") =>
-            Path.ChangeExtension(Path.GetTempFileName(), extension);
-
-        static string Randomize(string prefix = "sample") =>
-            $"{prefix}-{Guid.NewGuid()}";
-
-        static string CreateTempFile(string content = SampleFileContent)
-        {
-            string path = CreateTempPath();
-            File.WriteAllText(path, content);
-            return path;
-        }
 
         private BlobContainerClient BlobContainer
         {
@@ -47,19 +32,14 @@ namespace UsabilityFactoryExamQuiz.Utils.Repositories
             }
         }
 
-        public void SaveFiles(IEnumerable<IFormFile> files)
+        public void SaveFile(string fileName, IFormFile fileContent)
         {
-            foreach (var file in files)
+            using (var stream = fileContent.OpenReadStream())
             {
-                using (var stream = file.OpenReadStream())
-                {
-                    string blobName = Guid.NewGuid().ToString("N") + file.FileName;
-                    BlobClient blob = BlobContainer.GetBlobClient(blobName);
-                    blob.Upload(stream);
-
-                    System.Diagnostics.Debug.WriteLine(blob.Name + " added to Azure...");
-                }
+                BlobClient blob = BlobContainer.GetBlobClient(fileName);
+                blob.Upload(stream);
             }
         }
+
     }
 }
