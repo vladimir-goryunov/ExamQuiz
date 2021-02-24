@@ -39,6 +39,10 @@ namespace UsabilityFactoryExamQuiz.Utils.Repositories
             return _dbContext.Answers.FirstOrDefault(u => u.Id.Equals(id));
         }
 
+        /// <summary>
+        /// Сохраняем файлы вложений в Azure Storage Blob, а инфо о файлах в БД MS SQL Express
+        /// </summary>
+        /// <param name="attachmentModel">Модель вложений к ответу на вопрос</param>
         public void SaveAnswerAttachments(AttachmentModel attachmentModel)
         {
             Guid answerId = attachmentModel != null ? attachmentModel.AnswerId : throw new AnswerNotFoundException();
@@ -78,6 +82,10 @@ namespace UsabilityFactoryExamQuiz.Utils.Repositories
             _dbContext.SaveChanges(); // Обновляем answer после добавления аттачей
         }
 
+        /// <summary>
+        /// Сохраняем события в БД MS SQL Express 
+        /// </summary>
+        /// <param name="eventModel">Модель событий, описывающие поведение пользователя при ответе на вопрос</param>
         public void SaveAnswerEvents(EventModel eventModel)
         {
             Guid answerId = eventModel != null ? eventModel.AnswerId : throw new AnswerNotFoundException();
@@ -89,12 +97,18 @@ namespace UsabilityFactoryExamQuiz.Utils.Repositories
             _dbContext.SaveChanges();
         }
 
+        /// <summary>
+        /// Получим все ответы
+        /// </summary>
+        /// <returns></returns>
         public async Task<IEnumerable<AnswerEntity>> GetAll()
         {
             return await _dbContext.Answers.ToListAsync();
         }
 
-        /*
+        /// <summary>
+        /// Создаем тестовый набор данных
+        /// </summary>
         public void CreateTestDataSet() {
             var answer1Id = Guid.NewGuid();
             var answer2Id = Guid.NewGuid();
@@ -178,7 +192,5 @@ namespace UsabilityFactoryExamQuiz.Utils.Repositories
             }
 
         }
-        */
-
     }
 }
