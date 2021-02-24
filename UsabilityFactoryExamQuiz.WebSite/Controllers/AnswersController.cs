@@ -7,10 +7,13 @@ using UsabilityFactoryExamQuiz.Utils.Exceptions;
 using UsabilityFactoryExamQuiz.Model.DataContract;
 using System.Collections.Generic;
 using UsabilityFactoryExamQuiz.Model.EF.Models;
-
+using System.Diagnostics;
+using Microsoft.AspNetCore.Http;
+using System.Linq;
 
 namespace UsabilityFactoryExamQuiz.WebSite.Controllers
 {
+    [Route("~/api/v1")]
     [ApiController]
     public class AnswersController : ControllerBase
     {
@@ -30,7 +33,7 @@ namespace UsabilityFactoryExamQuiz.WebSite.Controllers
         /// </summary>
         /// <returns>Список ответов</returns>
         [HttpGet]
-        [Route("~/answers")]
+        [Route("answers")]
         public async Task<ActionResult<List<AnswerEntity>>> Get()
         {
             try
@@ -53,13 +56,16 @@ namespace UsabilityFactoryExamQuiz.WebSite.Controllers
         /// <param name="answerId"></param>
         /// <returns></returns>
         [HttpPost, DisableRequestSizeLimit]
-        [Route("~/answers/{answerId}/attachments")]
-        public async Task<ActionResult> Attachments([FromForm] AttachmentModel attachmentModel)
+        [Route("answers/{answerId}/attachments")]
+        [Produces("application/json")]
+        public async Task<ActionResult> Attachments([FromForm] string answerId, [FromForm] IEnumerable<IFormFile> files)
         {
+            AttachmentModel attachmentModel = new AttachmentModel();
             try
             {
-                if (attachmentModel == null) return BadRequest("Список вложений не определён");
-                attachmentModel.Files = Request.Form.Files;
+                Debug.WriteLine(answerId + "" +  files);
+
+                if (!files.ToList().Any()) return BadRequest("Список вложений не определён");
                 await Task.Run(() => _answerRepository.SaveAnswerAttachments(attachmentModel));
 
                 return Ok("Список вложений успешно сохранён");
@@ -85,12 +91,15 @@ namespace UsabilityFactoryExamQuiz.WebSite.Controllers
         /// <param name="answerId"></param>
         /// <returns></returns>
         [HttpPost("{answerId}")]
-        [Route("~/answers/{answerId}/events")]
+        [Route("answers/{answerId}/events")]
         [Produces("application/json")]
-        public async Task<ActionResult> Events([FromForm] EventModel eventModel)
+        public async Task<ActionResult> Events([FromForm] string answerId, [FromForm] string answerEventsJSON)
         {
+            EventModel eventModel = new EventModel();
             try
-            {
+            {                
+                Debug.WriteLine($"{answerId} :: {answerEventsJSON}");
+
                 if (eventModel == null) return BadRequest("Список событий не определён");
                 await Task.Run(() => _answerRepository.SaveAnswerEvents(eventModel));
 
