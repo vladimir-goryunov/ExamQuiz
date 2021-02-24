@@ -63,11 +63,6 @@ namespace UsabilityFactoryExamQuiz.WebSite
 
         private void AddDb(IServiceCollection services)
         {
-            DateTime created = DateTime.Now;
-            System.Diagnostics.Debug.WriteLine(created);
-
-            System.Diagnostics.Debug.WriteLine(Guid.NewGuid().ToString("D"));
-
             services.AddDbContext<IQuestionaireDBContext, QuestionaireDBContext>(opts =>
                 opts.UseLazyLoadingProxies().UseSqlServer(Configuration.GetConnectionString("DefaultConnection")),
                 ServiceLifetime.Transient);

@@ -7,10 +7,15 @@ using UsabilityFactoryExamQuiz.Utils.Exceptions;
 using UsabilityFactoryExamQuiz.Model.DataContract;
 using System.Collections.Generic;
 using UsabilityFactoryExamQuiz.Model.EF.Models;
-
+using System.Diagnostics;
+using Microsoft.AspNetCore.Http;
+using System.Linq;
+using UsabilityFactoryExamQuiz.Model.BusinessLogic;
+using UsabilityFactoryExamQuiz.Utils.Helpers;
 
 namespace UsabilityFactoryExamQuiz.WebSite.Controllers
 {
+    [Route("~/api/v1")]
     [ApiController]
     public class AnswersController : ControllerBase
     {
@@ -30,7 +35,7 @@ namespace UsabilityFactoryExamQuiz.WebSite.Controllers
         /// </summary>
         /// <returns>Список ответов</returns>
         [HttpGet]
-        [Route("~/answers")]
+        [Route("[controller]")]
         public async Task<ActionResult<List<AnswerEntity>>> Get()
         {
             try
@@ -53,13 +58,16 @@ namespace UsabilityFactoryExamQuiz.WebSite.Controllers
         /// <param name="answerId"></param>
         /// <returns></returns>
         [HttpPost, DisableRequestSizeLimit]
-        [Route("~/answers/{answerId}/attachments")]
+        [Route("[controller]/{answerId}/attachments")]
+        [Produces("application/json")]
+        //public async Task<ActionResult> Attachments([FromForm] string answerId, [FromForm] IEnumerable<IFormFile> files)
         public async Task<ActionResult> Attachments([FromForm] AttachmentModel attachmentModel)
         {
             try
             {
-                if (attachmentModel == null) return BadRequest("Список вложений не определён");
-                attachmentModel.Files = Request.Form.Files;
+                Debug.WriteLine(attachmentModel.AnswerId + "" + attachmentModel.Files);
+
+                if (attachmentModel.Files ==null || !attachmentModel.Files.ToList().Any()) return BadRequest("Список вложений не определён");
                 await Task.Run(() => _answerRepository.SaveAnswerAttachments(attachmentModel));
 
                 return Ok("Список вложений успешно сохранён");
@@ -85,13 +93,18 @@ namespace UsabilityFactoryExamQuiz.WebSite.Controllers
         /// <param name="answerId"></param>
         /// <returns></returns>
         [HttpPost("{answerId}")]
-        [Route("~/answers/{answerId}/events")]
+        [Route("[controller]/{answerId}/events")]
         [Produces("application/json")]
         public async Task<ActionResult> Events([FromForm] EventModel eventModel)
         {
             try
             {
-                if (eventModel == null) return BadRequest("Список событий не определён");
+                Debug.WriteLine($"{eventModel.AnswerId} :: {eventModel.EventsJson}");
+
+                if (string.IsNullOrEmpty(eventModel.EventsJson)) return BadRequest("Список событий не определён");
+                eventModel.Events = JsonHelper<List<AnswerEventEntity>>.CreateFromJSON(eventModel.EventsJson);
+                
+                if (!eventModel.Events.Any()) return BadRequest("Список событий не определён");
                 await Task.Run(() => _answerRepository.SaveAnswerEvents(eventModel));
 
                 return Ok("Список событий успешно сохранён");
@@ -105,6 +118,28 @@ namespace UsabilityFactoryExamQuiz.WebSite.Controllers
             catch (Exception ex)
             {
                 var errorMessage = $"Ошибка при сохранении списка событий - {ex.Message}";
+                _logger.LogError(ex.InnerException ?? ex, errorMessage);
+                return StatusCode(InternalServerError, errorMessage);
+            }
+        }
+
+        /// <summary>
+        /// Получает список случайных событий
+        /// </summary>
+        /// <returns>Список случайных событий</returns>
+        [HttpGet]
+        [Route("[controller]/{answerId}/random-events")]
+        public async Task<ActionResult<List<AnswerEventEntity>>> RandomEvents([FromQuery] string answerId)
+        {
+            try
+            {
+                var results = await Task.Run(() => DataGeneratorHelper.GenerateEvents(Guid.Parse(answerId)));
+
+                return Ok(results);
+            }
+            catch (Exception ex)
+            {
+                var errorMessage = $"Ошибка получении списка случайных событий - {ex.Message}";
                 _logger.LogError(ex.InnerException ?? ex, errorMessage);
                 return StatusCode(InternalServerError, errorMessage);
             }

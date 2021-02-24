@@ -46,6 +46,7 @@ namespace UsabilityFactoryExamQuiz.Utils.Repositories
             if (answer == null) throw new AnswerNotFoundException();
 
             var files = attachmentModel.Files.ToList();
+            int savedAttachments = 0;
             foreach (var file in files)
             {
                 if (file.Length > 0)
@@ -63,6 +64,7 @@ namespace UsabilityFactoryExamQuiz.Utils.Repositories
                         var fileName = attachment.Id.ToString() + Path.GetExtension(file.FileName);
                         _attachmentRepository.SaveFile(fileName, file);
                         answer.Attachments.Add(attachment);
+                        savedAttachments++;
                     }
                     catch (Exception ex)
                     {
@@ -71,8 +73,9 @@ namespace UsabilityFactoryExamQuiz.Utils.Repositories
                     }
                 }
             }
-            _dbContext.SaveChanges(); // Обновляем answer после добавления аттачей
 
+            if (files.Count != savedAttachments) throw new CoreException("Не удалось сохранить вложения. Подробности см. в лог файле.");
+            _dbContext.SaveChanges(); // Обновляем answer после добавления аттачей
         }
 
         public void SaveAnswerEvents(EventModel eventModel)
@@ -81,32 +84,7 @@ namespace UsabilityFactoryExamQuiz.Utils.Repositories
             var answer = GetAnswerById(answerId);
             if (answer == null) throw new AnswerNotFoundException();
 
-
-            /*
-            // Вставка тестовой дочерней записи
-            answer.Attachments.Add(new AnswerAttachmentEntity()
-            {
-                Id = Guid.NewGuid(),
-                AnswerId = answer.Id,
-                Created = DateTime.Now,
-                FileName = "Тест фром извне!",
-                MimeType = "html/text",
-                Size = 1232
-            }
-            );            
-            // Вставка тестовой дочерней записи
-            answer.Events.Add(new AnswerEventEntity()
-            {
-                Id = Guid.NewGuid(),
-                AnswerId = answer.Id,
-                Value = "Real Test извне",
-                ClientTime = DateTime.Now,
-                Type = AnswerEventTypeEnumEntity.Other
-            }
-            );
-            */
-
-            //answer.Events = eventModel.Events
+            answer.Events = eventModel.Events;
 
             _dbContext.SaveChanges();
         }

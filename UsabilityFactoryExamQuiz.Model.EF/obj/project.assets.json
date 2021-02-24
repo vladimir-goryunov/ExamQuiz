@@ -6038,11 +6038,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Business\\_~ПОИСК РАБОТЫ~_\\_Собеседования\\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\\Source Code\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Model.EF\\UsabilityFactoryExamQuiz.Model.EF.csproj",
+      "projectUniqueName": "D:\\_Net.TestTask\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Model.EF\\UsabilityFactoryExamQuiz.Model.EF.csproj",
       "projectName": "UsabilityFactoryExamQuiz.Model.EF",
-      "projectPath": "D:\\Business\\_~ПОИСК РАБОТЫ~_\\_Собеседования\\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\\Source Code\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Model.EF\\UsabilityFactoryExamQuiz.Model.EF.csproj",
+      "projectPath": "D:\\_Net.TestTask\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Model.EF\\UsabilityFactoryExamQuiz.Model.EF.csproj",
       "packagesPath": "C:\\Users\\Vladimir\\.nuget\\packages\\",
-      "outputPath": "D:\\Business\\_~ПОИСК РАБОТЫ~_\\_Собеседования\\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\\Source Code\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Model.EF\\obj\\",
+      "outputPath": "D:\\_Net.TestTask\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Model.EF\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Vladimir\\AppData\\Roaming\\NuGet\\NuGet.Config",
