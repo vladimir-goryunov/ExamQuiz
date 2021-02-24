@@ -1257,7 +1257,8 @@
       },
       "UsabilityFactoryExamQuiz.Model/1.0.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.Http": "2.2.2"
+          "Microsoft.AspNetCore.Http": "2.2.2",
+          "UsabilityFactoryExamQuiz.Model.EF": "1.0.0"
         },
         "runtime": {
           "UsabilityFactoryExamQuiz.Model.dll": {}

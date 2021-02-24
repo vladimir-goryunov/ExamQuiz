@@ -46,3 +46,19 @@ D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрик
 D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\Source Code\git\ExamQuiz\UsabilityFactoryExamQuiz.Utils\obj\x64\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Utils.csproj.CopyComplete
 D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\Source Code\git\ExamQuiz\UsabilityFactoryExamQuiz.Utils\obj\x64\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Utils.dll
 D:\Business\_~ПОИСК РАБОТЫ~_\_Собеседования\Фабрика Юзабилити - Обнинск (Тестовое C#.NET)\Source Code\git\ExamQuiz\UsabilityFactoryExamQuiz.Utils\obj\x64\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Utils.pdb
+D:\_Net.TestTask\git\ExamQuiz\UsabilityFactoryExamQuiz.Utils\bin\x64\Debug\netcoreapp3.1\appsettings.Development.json
+D:\_Net.TestTask\git\ExamQuiz\UsabilityFactoryExamQuiz.Utils\bin\x64\Debug\netcoreapp3.1\appsettings.json
+D:\_Net.TestTask\git\ExamQuiz\UsabilityFactoryExamQuiz.Utils\bin\x64\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Utils.deps.json
+D:\_Net.TestTask\git\ExamQuiz\UsabilityFactoryExamQuiz.Utils\bin\x64\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Utils.dll
+D:\_Net.TestTask\git\ExamQuiz\UsabilityFactoryExamQuiz.Utils\bin\x64\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Utils.pdb
+D:\_Net.TestTask\git\ExamQuiz\UsabilityFactoryExamQuiz.Utils\bin\x64\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.dll
+D:\_Net.TestTask\git\ExamQuiz\UsabilityFactoryExamQuiz.Utils\bin\x64\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.dll
+D:\_Net.TestTask\git\ExamQuiz\UsabilityFactoryExamQuiz.Utils\bin\x64\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.pdb
+D:\_Net.TestTask\git\ExamQuiz\UsabilityFactoryExamQuiz.Utils\bin\x64\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.pdb
+D:\_Net.TestTask\git\ExamQuiz\UsabilityFactoryExamQuiz.Utils\obj\x64\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Utils.csprojAssemblyReference.cache
+D:\_Net.TestTask\git\ExamQuiz\UsabilityFactoryExamQuiz.Utils\obj\x64\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Utils.AssemblyInfoInputs.cache
+D:\_Net.TestTask\git\ExamQuiz\UsabilityFactoryExamQuiz.Utils\obj\x64\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Utils.AssemblyInfo.cs
+D:\_Net.TestTask\git\ExamQuiz\UsabilityFactoryExamQuiz.Utils\obj\x64\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Utils.csproj.CoreCompileInputs.cache
+D:\_Net.TestTask\git\ExamQuiz\UsabilityFactoryExamQuiz.Utils\obj\x64\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Utils.csproj.CopyComplete
+D:\_Net.TestTask\git\ExamQuiz\UsabilityFactoryExamQuiz.Utils\obj\x64\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Utils.dll
+D:\_Net.TestTask\git\ExamQuiz\UsabilityFactoryExamQuiz.Utils\obj\x64\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Utils.pdb

@@ -3,53 +3,53 @@
 }
 
 <div class="text-left">
-    <h1>REST API</h1>
+    <h1>ExamQuiz REST API</h1>
     <div>
-        <div style="background-color:floralwhite;">
-            <h2>Answers</h2>
-            <button onclick="init()">Загрузить ответы</button>
-            <input type="text" id="answers" />
+        <div style="background-color:floralwhite;margin-bottom:15px;padding:10px;">
+            <h2>Answers&nbsp;&nbsp;&nbsp;<button id="answerSource" name="answerSource">Загрузить ответы...</button></h2>
+            <span id="answersLoading" style="display:none;">Загружаем ответы...</span>            
+            <select id="answers" name="answers" style="display:none;"></select>
         </div>
-        <div style="background-color:beige;">
+
+        <div id="events" style="background-color:beige;display:none;margin-bottom:15px;padding:10px;">
             <h2>Events</h2>
-            <form method="post" action="api/v1/answers/68F3CB6B-CDB5-4E00-B5B3-99DE07F7CEE4/events">
+            <form id="eventsForm"
+                  method="post"
+                  action="api/v1/answers/{answerId}/events">
+                <input type="hidden" id="eventModel.AnswerId" name="eventModel.AnswerId" />
                 <div class="form-group">
                     <div class="col-md-10">
-                        AnswerId:
-                        <input type="text" id="answerId" name="answerId" value="A894B675-DAD5-4EF0-BA1F-0893265CD5F3" />
+                        Строка AnswerEvent[] JSON:
+                        <input type="text" id="eventModel.EventsJson" name="eventModel.EventsJson" />
+                        <button onclick="randomEvents(); return false;">Сгенерировать...</button>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="col-md-10">
-                        AnswerEventsJSON:
-                        <input type="text" id="answerEventsJSON" name="answerEventsJSON" value="QWERTY" />
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-10">
-                        <input type="submit" value="Save" />
+                        <input type="submit" value="Сохранить" />
                     </div>
                 </div>
             </form>
         </div>
-        <div style="background-color:antiquewhite;">
+
+        <div id="attachments" style="background-color: antiquewhite;display:none;padding:10px;">
             <h2>Attachments</h2>
-            <form method="post" enctype="multipart/form-data" action="api/v1/answers/68F3CB6B-CDB5-4E00-B5B3-99DE07F7CEE4/attachments">
+
+            <form id="attachmentsForm"
+                  method="post"
+                  enctype="multipart/form-data"
+                  action="api/v1/answers/{answerId}/attachments">
+
+                <input type="hidden" id="attachmentModel.AnswerId" name="attachmentModel.AnswerId" />
                 <div class="form-group">
                     <div class="col-md-10">
-                        AnswerId:
-                        <input type="text" id="answerId" name="answerId" value="A894B675-DAD5-4EF0-BA1F-0893265CD5F3" />
+                        <p>Файлы вложений:</p>
+                        <input type="file" id="attachmentModel.Files" name="attachmentModel.Files" multiple />
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="col-md-10">
-                        <p>Upload one or more files using this form:</p>
-                        <input type="file" name="files" multiple />
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-10">
-                        <input type="submit" value="Upload" />
+                        <input type="submit" value="Сохранить" />
                     </div>
                 </div>
             </form>
@@ -59,97 +59,47 @@
 
 <script>
 
-    var saveEvents = function () {
-
-        //var url = 'answers/' + $('#AnswerId').val() + '/events';
-        var url = 'api/v1/answers/' + $('#AnswerId').val() + '/events';
-
-        var data = {
-            AnswerId: $('#AnswerId').val(),
-            AnswerEventsJSON: $('#AnswerEventsJSON').val()
-        }
-
-        $.ajax({
-            type: 'POST',
-            url: url,
-            dataType: 'json',
-            contentType: 'application/x-www-form-urlencoded; charset=utf-8',
-            data: data
-        }).done(function (data) {
-            alert(data);
-        }).fail(function (jqXHR, textStatus, errorThrown) {
-            alert(jqXHR.statusText + ': ' + jqXHR.responseText);
-        });
-    }
-
-    var init = function () {
-        $.get("api/v1/answers/", function (data) {
-            var answerData = '';
-            for (var i = 0; i < data.length; i++) {
-                var answer = data[i];
-                answerData += answer.id + " | ";
-            }
-            $('#answers').val(answerData)
-        });
-    }
-</script>
-
-<script>
-    var formdata = new FormData();
-    $(document).ready(function () {
-
-        $("#fileInput").on("change", function () {
-            var fileInput = document.getElementById('fileInput');
-            for (i = 0; i < fileInput.files.length; i++) {
-
-                var sfilename = fileInput.files[i].name;
-                let srandomid = Math.random().toString(36).substring(7);
-
-                formdata.append(sfilename, fileInput.files[i]);
-
-                var markup = "<tr id='" + srandomid + "'><td>" + sfilename +
-                    "</td><td><a href='#' onclick='DeleteFile(\"" + srandomid + "\",\"" + sfilename +
-                    "\")'><span class='glyphicon glyphicon-remove red'></span></a></td></tr>"; 
-                $("#FilesList tbody").append(markup);
-
-            }
-            chkatchtbl();
-            $('#fileInput').val('');
-        });
-
-        var url = 'answers/68F3CB6B-CDB5-4E00-B5B3-99DE07F7CEE4/attachments';
-
-        $("#btnupload").click(function () {
-            //formdata.append('uploadername', $('#txtuploader').val());
-            formdata.append('AnswerId', $('#txtuploader').val());
-
-            $.ajax({
-                type: 'POST',
-                url: url,
-                contentType: false,
-                processData: false,
-                data: formdata,
-                success: function (result) {
-                    if (result != "") {
-                        alert(result);
-                    }
-                },
-                error: function (err) {
-                    alert(err.statusText);
-                }
-            });
-        });
+    $("#eventsForm").submit(function (event) {
+        var selectedAnswerId = $("#answers option:selected").val();
+        $("#eventModel\\.AnswerId").val(selectedAnswerId);
+        $("#eventsForm").attr('action', 'api/v1/answers/' + selectedAnswerId + '/events');
     });
-    function DeleteFile(Fileid, FileName) {
-        formdata.delete(FileName)
-        $("#" + Fileid).remove();
-        chkatchtbl();
-    }
-    function chkatchtbl() {
-        if ($('#FilesList tr').length > 1) {
-            $("#FilesList").css("visibility", "visible");
-        } else {
-            $("#FilesList").css("visibility", "hidden");
-        }
+
+    $("#attachmentsForm").submit(function (event) {
+        var selectedAnswerId = $("#answers option:selected").val();
+        $("#attachmentModel\\.AnswerId").val(selectedAnswerId);
+        $("#attachmentsForm").attr('action', 'api/v1/answers/' + selectedAnswerId + '/attachments');
+    });
+
+    $("#answers").change(function (event) {
+        $("#events").show();
+        $("#attachments").show();
+    });    
+
+    $("#answerSource").click(function () {
+        const url = "api/v1/answers/";
+
+        // Populate dropdown with list of provinces
+        $.getJSON(url, function (data) {            
+            var dropdown = $('#answers');
+            dropdown.empty();
+            dropdown.append('<option selected="true" disabled>Выберите ответ</option>');
+            dropdown.prop('selectedIndex', 0);
+
+            $.each(data, function (key, entry) {
+                dropdown.append($('<option></option>').attr('value', entry.id).text(entry.id + ' | ' + entry.text));
+            })
+            $('#answersLoading').hide();
+            $('#answers').show();
+        }); 
+        $('#answersLoading').show();
+        $("#answerSource").hide();
+    });
+
+    var randomEvents = function () {
+        var selectedAnswerId = $("#answers option:selected").val();
+        $.get("api/v1/answers/" + selectedAnswerId + "/random-events?answerId=" + selectedAnswerId , function (data) {            
+            $('#eventModel\\.EventsJson').val(JSON.stringify(data))
+        });
     }
 </script>

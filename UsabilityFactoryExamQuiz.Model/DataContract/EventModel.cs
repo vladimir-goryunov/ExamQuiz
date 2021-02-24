@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UsabilityFactoryExamQuiz.Model.BusinessLogic;
+using UsabilityFactoryExamQuiz.Model.EF.Models;
 
 namespace UsabilityFactoryExamQuiz.Model.DataContract
 {
@@ -14,20 +15,14 @@ namespace UsabilityFactoryExamQuiz.Model.DataContract
         /// <summary>
         /// Строка JSON c массивом событий
         /// </summary>
-        public String AnswerEventsJSON { get; set; }
+        public String EventsJson { get; set; }
 
         /// <summary>
         /// Массив событий, приложенные к ответу
         /// </summary>
-        public List<AnswerEvent> Events {
-            get { 
-                return new List<AnswerEvent>(); 
-            }  
-        }
+        public List<AnswerEventEntity> Events { get; set; }
 
-        private AnswerEvent[] ToEvents(string eventsJson) {
-            return null;
-        }
+
         public EventModel() { 
         }
 
@@ -36,9 +31,9 @@ namespace UsabilityFactoryExamQuiz.Model.DataContract
             AnswerId = answerId;
         }
 
-        public EventModel(Guid answerId, String answerEventsJSON) {
+        public EventModel(Guid answerId, String eventsJson) {
             AnswerId = answerId;
-            AnswerEventsJSON = answerEventsJSON;
+            EventsJson = eventsJson;
         }
     }
 }
