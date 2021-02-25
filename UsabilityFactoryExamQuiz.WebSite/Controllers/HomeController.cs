@@ -5,6 +5,9 @@ using UsabilityFactoryExamQuiz.WebSite.Models;
 
 namespace UsabilityFactoryExamQuiz.WebSite.Controllers
 {
+    /// <summary>
+    /// Базовый контроллер приложения
+    /// </summary>
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;

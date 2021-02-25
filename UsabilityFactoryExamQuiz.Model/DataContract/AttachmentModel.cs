@@ -4,6 +4,9 @@ using Microsoft.AspNetCore.Http;
 
 namespace UsabilityFactoryExamQuiz.Model.DataContract
 {
+    /// <summary>
+    /// Data Contract для модели вложений к ответу
+    /// </summary>
     public class AttachmentModel
     {
         /// <summary>

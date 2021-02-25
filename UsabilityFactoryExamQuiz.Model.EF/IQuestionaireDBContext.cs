@@ -6,6 +6,9 @@ using UsabilityFactoryExamQuiz.Model.EF.Models;
 
 namespace UsabilityFactoryExamQuiz.Model.EF
 {
+    /// <summary>
+    /// Интерфейс БД-контекста приложения
+    /// </summary>
     public interface IQuestionaireDBContext : IDisposable
     {
         DbSet<QuestionEntity> Questions { get; }

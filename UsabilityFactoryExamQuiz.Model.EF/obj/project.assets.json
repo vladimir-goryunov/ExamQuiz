@@ -6038,11 +6038,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\_Net.TestTask\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Model.EF\\UsabilityFactoryExamQuiz.Model.EF.csproj",
+      "projectUniqueName": "D:\\_Net.Interview\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Model.EF\\UsabilityFactoryExamQuiz.Model.EF.csproj",
       "projectName": "UsabilityFactoryExamQuiz.Model.EF",
-      "projectPath": "D:\\_Net.TestTask\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Model.EF\\UsabilityFactoryExamQuiz.Model.EF.csproj",
+      "projectPath": "D:\\_Net.Interview\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Model.EF\\UsabilityFactoryExamQuiz.Model.EF.csproj",
       "packagesPath": "C:\\Users\\Vladimir\\.nuget\\packages\\",
-      "outputPath": "D:\\_Net.TestTask\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Model.EF\\obj\\",
+      "outputPath": "D:\\_Net.Interview\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Model.EF\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Vladimir\\AppData\\Roaming\\NuGet\\NuGet.Config",

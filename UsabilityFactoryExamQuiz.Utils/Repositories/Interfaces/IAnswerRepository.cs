@@ -6,9 +6,15 @@ using UsabilityFactoryExamQuiz.Model.EF.Models;
 
 namespace UsabilityFactoryExamQuiz.Utils.Repositories.Interfaces
 {
+    /// <summary>
+    /// Основные методы для работы с ответами на вопросы
+    /// </summary>
     public interface IAnswerRepository
     {
-
+        /// <summary>
+        /// Получить все ответы на вопросы
+        /// </summary>
+        /// <returns></returns>
         public Task<IEnumerable<AnswerEntity>> GetAll();
 
         /// <summary>

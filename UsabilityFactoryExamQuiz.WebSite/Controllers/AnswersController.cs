@@ -7,14 +7,21 @@ using UsabilityFactoryExamQuiz.Utils.Exceptions;
 using UsabilityFactoryExamQuiz.Model.DataContract;
 using System.Collections.Generic;
 using UsabilityFactoryExamQuiz.Model.EF.Models;
-using System.Diagnostics;
-using Microsoft.AspNetCore.Http;
 using System.Linq;
-using UsabilityFactoryExamQuiz.Model.BusinessLogic;
 using UsabilityFactoryExamQuiz.Utils.Helpers;
+using Microsoft.AspNetCore.Http;
 
 namespace UsabilityFactoryExamQuiz.WebSite.Controllers
 {
+
+    /// <summary>
+    /// REST API контроллер ответов
+    /// </summary>
+    /// <remarks>
+    /// Подключение Swagger
+    /// PM -> Swashbuckle.AspNetCore
+    /// PM> Install-Package Swashbuckle.AspNetCore.Newtonsoft
+    /// </remarks>
     [Route("~/api/v1")]
     [ApiController]
     public class AnswersController : ControllerBase
@@ -36,7 +43,10 @@ namespace UsabilityFactoryExamQuiz.WebSite.Controllers
         /// <returns>Список ответов</returns>
         [HttpGet]
         [Route("[controller]")]
-        public async Task<ActionResult<List<AnswerEntity>>> Get()
+        [Produces("application/json")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<ActionResult<IQueryable<AnswerEntity>>> Get()
         {
             try
             {
@@ -57,16 +67,21 @@ namespace UsabilityFactoryExamQuiz.WebSite.Controllers
         /// </summary>
         /// <param name="answerId"></param>
         /// <returns></returns>
+        /// <response code="200">Список вложений успешно сохранён </response>
+        /// <response code="400">Ошибка при сохранении списка вложений. Список вложений не определён</response>  
+        /// <response code="404">Ошибка при сохранении списка вложений. Указанный ответ, к которому относятся вложения, не найден в системе</response>  
+        /// <response code="500">Ошибка при сохранении списка вложений. Внутренняя ошибка на сервере</response>  
         [HttpPost, DisableRequestSizeLimit]
         [Route("[controller]/{answerId}/attachments")]
         [Produces("application/json")]
-        //public async Task<ActionResult> Attachments([FromForm] string answerId, [FromForm] IEnumerable<IFormFile> files)
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<ActionResult> Attachments([FromForm] AttachmentModel attachmentModel)
         {
             try
             {
-                Debug.WriteLine(attachmentModel.AnswerId + "" + attachmentModel.Files);
-
                 if (attachmentModel.Files ==null || !attachmentModel.Files.ToList().Any()) return BadRequest("Список вложений не определён");
                 await Task.Run(() => _answerRepository.SaveAnswerAttachments(attachmentModel));
 
@@ -92,15 +107,22 @@ namespace UsabilityFactoryExamQuiz.WebSite.Controllers
         /// </summary>
         /// <param name="answerId"></param>
         /// <returns></returns>
-        [HttpPost("{answerId}")]
+        /// <response code="200">Список событий успешно сохранён </response>
+        /// <response code="400">Ошибка при сохранении списка событий. Список событий не определён</response>  
+        /// <response code="404">Ошибка при сохранении списка событий. Указанный ответ, к которому относятся события, не найден в системе</response>  
+        /// <response code="500">Ошибка при сохранении списка событий. Внутренняя ошибка на сервере</response>  
+        [HttpPost()]
         [Route("[controller]/{answerId}/events")]
         [Produces("application/json")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+
         public async Task<ActionResult> Events([FromForm] EventModel eventModel)
         {
             try
             {
-                Debug.WriteLine($"{eventModel.AnswerId} :: {eventModel.EventsJson}");
-
                 if (string.IsNullOrEmpty(eventModel.EventsJson)) return BadRequest("Список событий не определён");
                 eventModel.Events = JsonHelper<List<AnswerEventEntity>>.CreateFromJSON(eventModel.EventsJson);
                 
@@ -129,6 +151,9 @@ namespace UsabilityFactoryExamQuiz.WebSite.Controllers
         /// <returns>Список случайных событий</returns>
         [HttpGet]
         [Route("[controller]/{answerId}/random-events")]
+        [Produces("application/json")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<ActionResult<List<AnswerEventEntity>>> RandomEvents([FromQuery] string answerId)
         {
             try

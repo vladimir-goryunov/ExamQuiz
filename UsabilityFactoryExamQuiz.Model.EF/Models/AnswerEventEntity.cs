@@ -4,6 +4,9 @@ using System.Text;
 
 namespace UsabilityFactoryExamQuiz.Model.EF.Models
 {
+    /// <summary>
+    /// Модель сущность события, связанного с ответом на вопрос
+    /// </summary>
     public class AnswerEventEntity
     {
         /// <summary>

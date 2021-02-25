@@ -5,6 +5,9 @@ using System.Linq;
 
 namespace UsabilityFactoryExamQuiz.Utils.Helpers
 {
+    /// <summary>
+    /// Расширение для стандартного энумератора
+    /// </summary>
     public static class EnumHelper
     {
         public static int GetLength<E>()

@@ -4,6 +4,9 @@ using UsabilityFactoryExamQuiz.Model.EF.Models;
 
 namespace UsabilityFactoryExamQuiz.Utils.Helpers
 {
+    /// <summary>
+    /// Генерация данных для приложения
+    /// </summary>
     public static class DataGeneratorHelper
     {
         static string GetRandomPhrase() {

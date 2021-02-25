@@ -1,22 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
-using Azure.Storage;
-using Azure.Storage.Blobs;
-using Azure.Storage.Blobs.Models;
+﻿using Azure.Storage.Blobs;
 using Microsoft.AspNetCore.Http;
 using UsabilityFactoryExamQuiz.Utils.Repositories.Interfaces;
+using Microsoft.Extensions.Configuration;
 
 namespace UsabilityFactoryExamQuiz.Utils.Repositories
 {
+    /// <summary>
+    /// Реализация основных методов работы с хранилищем файлов Azure Storage
+    /// </summary>
     public class AzureStorageRepository : IFileRepository
     {
-        private static BlobContainerClient container;
+        private readonly IConfiguration _config;
 
-        string connectionString = "DefaultEndpointsProtocol=http;AccountName=devstoreaccount1;AccountKey=Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==;BlobEndpoint=http://127.0.0.1:10000/devstoreaccount1;QueueEndpoint=http://127.0.0.1:10001/devstoreaccount1;TableEndpoint=http://127.0.0.1:10001/devstoreaccount1;";
-        string containerName = "attachments";
+        public AzureStorageRepository(IConfiguration config) {
+            _config = config;
+        }
+
+        private static BlobContainerClient container;
 
         private BlobContainerClient BlobContainer
         {
@@ -24,6 +24,8 @@ namespace UsabilityFactoryExamQuiz.Utils.Repositories
             {
                 if (container == null)
                 {
+                    string connectionString = _config.GetValue<string>("StorageSettings:AzureStorageConnection"); 
+                    string containerName = _config.GetValue<string>("StorageSettings:BlobContainerName"); 
                     container = new BlobContainerClient(connectionString, containerName);
                     container.CreateIfNotExists();
                 }
@@ -32,6 +34,11 @@ namespace UsabilityFactoryExamQuiz.Utils.Repositories
             }
         }
 
+        /// <summary>
+        /// Сохраним файл в виде блоба в Azure Storage
+        /// </summary>
+        /// <param name="fileName"></param>
+        /// <param name="fileContent"></param>
         public void SaveFile(string fileName, IFormFile fileContent)
         {
             using (var stream = fileContent.OpenReadStream())

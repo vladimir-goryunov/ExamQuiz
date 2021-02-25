@@ -52,3 +52,16 @@ D:\_Net.TestTask\git\ExamQuiz\UsabilityFactoryExamQuiz.Model.EF\obj\x64\Debug\ne
 D:\_Net.TestTask\git\ExamQuiz\UsabilityFactoryExamQuiz.Model.EF\obj\x64\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.dll
 D:\_Net.TestTask\git\ExamQuiz\UsabilityFactoryExamQuiz.Model.EF\obj\x64\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.pdb
 D:\_Net.TestTask\git\ExamQuiz\UsabilityFactoryExamQuiz.Model.EF\obj\x64\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.genruntimeconfig.cache
+D:\_Net.Interview\git\ExamQuiz\UsabilityFactoryExamQuiz.Model.EF\bin\x64\Debug\netcoreapp3.1\appsettings.Development.json
+D:\_Net.Interview\git\ExamQuiz\UsabilityFactoryExamQuiz.Model.EF\bin\x64\Debug\netcoreapp3.1\appsettings.json
+D:\_Net.Interview\git\ExamQuiz\UsabilityFactoryExamQuiz.Model.EF\bin\x64\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.deps.json
+D:\_Net.Interview\git\ExamQuiz\UsabilityFactoryExamQuiz.Model.EF\bin\x64\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.runtimeconfig.json
+D:\_Net.Interview\git\ExamQuiz\UsabilityFactoryExamQuiz.Model.EF\bin\x64\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.runtimeconfig.dev.json
+D:\_Net.Interview\git\ExamQuiz\UsabilityFactoryExamQuiz.Model.EF\bin\x64\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.dll
+D:\_Net.Interview\git\ExamQuiz\UsabilityFactoryExamQuiz.Model.EF\bin\x64\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.pdb
+D:\_Net.Interview\git\ExamQuiz\UsabilityFactoryExamQuiz.Model.EF\obj\x64\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.AssemblyInfoInputs.cache
+D:\_Net.Interview\git\ExamQuiz\UsabilityFactoryExamQuiz.Model.EF\obj\x64\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.AssemblyInfo.cs
+D:\_Net.Interview\git\ExamQuiz\UsabilityFactoryExamQuiz.Model.EF\obj\x64\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.csproj.CoreCompileInputs.cache
+D:\_Net.Interview\git\ExamQuiz\UsabilityFactoryExamQuiz.Model.EF\obj\x64\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.dll
+D:\_Net.Interview\git\ExamQuiz\UsabilityFactoryExamQuiz.Model.EF\obj\x64\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.pdb
+D:\_Net.Interview\git\ExamQuiz\UsabilityFactoryExamQuiz.Model.EF\obj\x64\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.genruntimeconfig.cache
