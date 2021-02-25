@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aiEoh6m5eIZLTj6i9cGXxhtx4RgLAldoGlNSME3Px51rFoQF+qOcpqszW8fX2BgPKtkC+8FC0Fxak+xBgvawRA==",
+  "dgSpecHash": "84ikFARDSfzrwEkMwUNRCCP2lRt5Ar2ev6LJaZvGI4G5BGEQuUgdbOG20eanMDhe/nJoNTAsVU9SYYNuNZzHTw==",
   "success": true,
-  "projectFilePath": "D:\\_Net.Interview\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.WebSite\\UsabilityFactoryExamQuiz.WebSite.csproj",
+  "projectFilePath": "D:\\_Net.Interview\\final\\ExamQuiz\\UsabilityFactoryExamQuiz.WebSite\\UsabilityFactoryExamQuiz.WebSite.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Vladimir\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Vladimir\\.nuget\\packages\\azure.core\\1.8.1\\azure.core.1.8.1.nupkg.sha512",
