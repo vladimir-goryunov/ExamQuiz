@@ -3,7 +3,7 @@
 namespace UsabilityFactoryExamQuiz.Utils.Exceptions
 {
     /// <summary>
-    /// Исключение - ответ не найден
+    /// Ответ не найден
     /// </summary>
     public class AnswerNotFoundException : Exception
     {

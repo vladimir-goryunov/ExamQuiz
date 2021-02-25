@@ -4,6 +4,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace UsabilityFactoryExamQuiz.Model.EF.Models
 {
+    /// <summary>
+    /// Модель сущность ответа на вопрос
+    /// </summary>
     public class AnswerEntity
     {
         /// <summary>

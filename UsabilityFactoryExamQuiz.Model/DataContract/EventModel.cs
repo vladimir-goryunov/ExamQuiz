@@ -5,6 +5,10 @@ using UsabilityFactoryExamQuiz.Model.EF.Models;
 
 namespace UsabilityFactoryExamQuiz.Model.DataContract
 {
+    /// <summary>
+    /// Data Contract для модели событий к ответу
+    /// </summary>
+
     public class EventModel
     {
         /// <summary>

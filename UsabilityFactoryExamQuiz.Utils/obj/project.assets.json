@@ -301,6 +301,18 @@
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
         }
       },
+      "Microsoft.Extensions.Configuration.Binder/5.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "5.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll": {}
+        }
+      },
       "Microsoft.Extensions.Configuration.FileExtensions/5.0.0": {
         "type": "package",
         "dependencies": {
@@ -2187,6 +2199,26 @@
         "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.xml",
         "microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
         "microsoft.extensions.configuration.abstractions.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "Microsoft.Extensions.Configuration.Binder/5.0.0": {
+      "sha512": "Of1Irt1+NzWO+yEYkuDh5TpT4On7LKl98Q9iLqCdOZps6XXEWDj3AKtmyvzJPVXZe4apmkJJIiDL7rR1yC+hjQ==",
+      "type": "package",
+      "path": "microsoft.extensions.configuration.binder/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.Extensions.Configuration.Binder.dll",
+        "lib/net461/Microsoft.Extensions.Configuration.Binder.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.xml",
+        "microsoft.extensions.configuration.binder.5.0.0.nupkg.sha512",
+        "microsoft.extensions.configuration.binder.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
@@ -6420,6 +6452,7 @@
     ".NETCoreApp,Version=v3.1": [
       "Azure.Storage.Blobs >= 12.8.0",
       "Microsoft.EntityFrameworkCore >= 5.0.3",
+      "Microsoft.Extensions.Configuration.Binder >= 5.0.0",
       "UsabilityFactoryExamQuiz.Model >= 1.0.0",
       "UsabilityFactoryExamQuiz.Model.EF >= 1.0.0"
     ]
@@ -6430,11 +6463,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\_Net.TestTask\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Utils\\UsabilityFactoryExamQuiz.Utils.csproj",
+      "projectUniqueName": "D:\\_Net.Interview\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Utils\\UsabilityFactoryExamQuiz.Utils.csproj",
       "projectName": "UsabilityFactoryExamQuiz.Utils",
-      "projectPath": "D:\\_Net.TestTask\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Utils\\UsabilityFactoryExamQuiz.Utils.csproj",
+      "projectPath": "D:\\_Net.Interview\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Utils\\UsabilityFactoryExamQuiz.Utils.csproj",
       "packagesPath": "C:\\Users\\Vladimir\\.nuget\\packages\\",
-      "outputPath": "D:\\_Net.TestTask\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Utils\\obj\\",
+      "outputPath": "D:\\_Net.Interview\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Utils\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Vladimir\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6451,11 +6484,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\_Net.TestTask\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Model.EF\\UsabilityFactoryExamQuiz.Model.EF.csproj": {
-              "projectPath": "D:\\_Net.TestTask\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Model.EF\\UsabilityFactoryExamQuiz.Model.EF.csproj"
+            "D:\\_Net.Interview\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Model.EF\\UsabilityFactoryExamQuiz.Model.EF.csproj": {
+              "projectPath": "D:\\_Net.Interview\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Model.EF\\UsabilityFactoryExamQuiz.Model.EF.csproj"
             },
-            "D:\\_Net.TestTask\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Model\\UsabilityFactoryExamQuiz.Model.csproj": {
-              "projectPath": "D:\\_Net.TestTask\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Model\\UsabilityFactoryExamQuiz.Model.csproj"
+            "D:\\_Net.Interview\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Model\\UsabilityFactoryExamQuiz.Model.csproj": {
+              "projectPath": "D:\\_Net.Interview\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Model\\UsabilityFactoryExamQuiz.Model.csproj"
             }
           }
         }
@@ -6477,6 +6510,10 @@
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[5.0.3, )"
+          },
+          "Microsoft.Extensions.Configuration.Binder": {
+            "target": "Package",
+            "version": "[5.0.0, )"
           }
         },
         "imports": [

@@ -3,7 +3,7 @@
 namespace UsabilityFactoryExamQuiz.Utils.Exceptions
 {
     /// <summary>
-    /// Исключение - ошибка десериализации
+    /// Ошибки в процессе десериализации
     /// </summary>
     public class DeserializationException : Exception
     {

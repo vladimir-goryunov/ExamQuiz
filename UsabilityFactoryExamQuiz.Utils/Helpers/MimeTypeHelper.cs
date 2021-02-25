@@ -4,6 +4,9 @@ using System.Linq;
 
 namespace UsabilityFactoryExamQuiz.Utils.Helpers
 {
+    /// <summary>
+    /// Связь между расширением файла и его MimeType
+    /// </summary>
     public static class MimeTypeHelper
     {
         private static readonly Lazy<IDictionary<string, string>> _mappings = new Lazy<IDictionary<string, string>>(BuildMappings);

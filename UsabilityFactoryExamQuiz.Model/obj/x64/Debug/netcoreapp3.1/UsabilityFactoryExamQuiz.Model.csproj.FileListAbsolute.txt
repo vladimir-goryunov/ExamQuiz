@@ -38,3 +38,17 @@ D:\_Net.TestTask\git\ExamQuiz\UsabilityFactoryExamQuiz.Model\obj\x64\Debug\netco
 D:\_Net.TestTask\git\ExamQuiz\UsabilityFactoryExamQuiz.Model\obj\x64\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.csproj.CopyComplete
 D:\_Net.TestTask\git\ExamQuiz\UsabilityFactoryExamQuiz.Model\obj\x64\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.dll
 D:\_Net.TestTask\git\ExamQuiz\UsabilityFactoryExamQuiz.Model\obj\x64\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.pdb
+D:\_Net.Interview\git\ExamQuiz\UsabilityFactoryExamQuiz.Model\bin\x64\Debug\netcoreapp3.1\appsettings.Development.json
+D:\_Net.Interview\git\ExamQuiz\UsabilityFactoryExamQuiz.Model\bin\x64\Debug\netcoreapp3.1\appsettings.json
+D:\_Net.Interview\git\ExamQuiz\UsabilityFactoryExamQuiz.Model\bin\x64\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.deps.json
+D:\_Net.Interview\git\ExamQuiz\UsabilityFactoryExamQuiz.Model\bin\x64\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.dll
+D:\_Net.Interview\git\ExamQuiz\UsabilityFactoryExamQuiz.Model\bin\x64\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.pdb
+D:\_Net.Interview\git\ExamQuiz\UsabilityFactoryExamQuiz.Model\bin\x64\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.dll
+D:\_Net.Interview\git\ExamQuiz\UsabilityFactoryExamQuiz.Model\bin\x64\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.EF.pdb
+D:\_Net.Interview\git\ExamQuiz\UsabilityFactoryExamQuiz.Model\obj\x64\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.csprojAssemblyReference.cache
+D:\_Net.Interview\git\ExamQuiz\UsabilityFactoryExamQuiz.Model\obj\x64\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.AssemblyInfoInputs.cache
+D:\_Net.Interview\git\ExamQuiz\UsabilityFactoryExamQuiz.Model\obj\x64\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.AssemblyInfo.cs
+D:\_Net.Interview\git\ExamQuiz\UsabilityFactoryExamQuiz.Model\obj\x64\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.csproj.CoreCompileInputs.cache
+D:\_Net.Interview\git\ExamQuiz\UsabilityFactoryExamQuiz.Model\obj\x64\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.csproj.CopyComplete
+D:\_Net.Interview\git\ExamQuiz\UsabilityFactoryExamQuiz.Model\obj\x64\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.dll
+D:\_Net.Interview\git\ExamQuiz\UsabilityFactoryExamQuiz.Model\obj\x64\Debug\netcoreapp3.1\UsabilityFactoryExamQuiz.Model.pdb

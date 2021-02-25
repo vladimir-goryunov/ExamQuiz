@@ -4,6 +4,9 @@ using System.Text;
 
 namespace UsabilityFactoryExamQuiz.Model.EF.Models
 {
+    /// <summary>
+    /// Модель сущность типов событий
+    /// </summary>
     public enum AnswerEventTypeEnumEntity
     {
         /// <summary>

@@ -2,6 +2,9 @@
 
 namespace UsabilityFactoryExamQuiz.Utils.Exceptions
 {
+    /// <summary>
+    /// Проблемы при работе приложения
+    /// </summary>
     public class CoreException : Exception
     {
         public CoreException()

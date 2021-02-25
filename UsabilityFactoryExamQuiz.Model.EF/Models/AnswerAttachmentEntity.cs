@@ -4,6 +4,9 @@ using System.Text;
 
 namespace UsabilityFactoryExamQuiz.Model.EF.Models
 {
+    /// <summary>
+    /// Модель сущность вложений к ответу
+    /// </summary>
     public class AnswerAttachmentEntity
     {
         /// <summary>
