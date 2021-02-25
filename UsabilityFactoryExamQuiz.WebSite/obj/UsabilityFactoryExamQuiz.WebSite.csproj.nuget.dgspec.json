@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\_Net.Interview\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.WebSite\\UsabilityFactoryExamQuiz.WebSite.csproj": {}
+    "D:\\_Net.Interview\\final\\ExamQuiz\\UsabilityFactoryExamQuiz.WebSite\\UsabilityFactoryExamQuiz.WebSite.csproj": {}
   },
   "projects": {
-    "D:\\_Net.Interview\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Model.EF\\UsabilityFactoryExamQuiz.Model.EF.csproj": {
+    "D:\\_Net.Interview\\final\\ExamQuiz\\UsabilityFactoryExamQuiz.Model.EF\\UsabilityFactoryExamQuiz.Model.EF.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\_Net.Interview\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Model.EF\\UsabilityFactoryExamQuiz.Model.EF.csproj",
+        "projectUniqueName": "D:\\_Net.Interview\\final\\ExamQuiz\\UsabilityFactoryExamQuiz.Model.EF\\UsabilityFactoryExamQuiz.Model.EF.csproj",
         "projectName": "UsabilityFactoryExamQuiz.Model.EF",
-        "projectPath": "D:\\_Net.Interview\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Model.EF\\UsabilityFactoryExamQuiz.Model.EF.csproj",
+        "projectPath": "D:\\_Net.Interview\\final\\ExamQuiz\\UsabilityFactoryExamQuiz.Model.EF\\UsabilityFactoryExamQuiz.Model.EF.csproj",
         "packagesPath": "C:\\Users\\Vladimir\\.nuget\\packages\\",
-        "outputPath": "D:\\_Net.Interview\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Model.EF\\obj\\",
+        "outputPath": "D:\\_Net.Interview\\final\\ExamQuiz\\UsabilityFactoryExamQuiz.Model.EF\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Vladimir\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -82,14 +82,14 @@
         }
       }
     },
-    "D:\\_Net.Interview\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Model\\UsabilityFactoryExamQuiz.Model.csproj": {
+    "D:\\_Net.Interview\\final\\ExamQuiz\\UsabilityFactoryExamQuiz.Model\\UsabilityFactoryExamQuiz.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\_Net.Interview\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Model\\UsabilityFactoryExamQuiz.Model.csproj",
+        "projectUniqueName": "D:\\_Net.Interview\\final\\ExamQuiz\\UsabilityFactoryExamQuiz.Model\\UsabilityFactoryExamQuiz.Model.csproj",
         "projectName": "UsabilityFactoryExamQuiz.Model",
-        "projectPath": "D:\\_Net.Interview\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Model\\UsabilityFactoryExamQuiz.Model.csproj",
+        "projectPath": "D:\\_Net.Interview\\final\\ExamQuiz\\UsabilityFactoryExamQuiz.Model\\UsabilityFactoryExamQuiz.Model.csproj",
         "packagesPath": "C:\\Users\\Vladimir\\.nuget\\packages\\",
-        "outputPath": "D:\\_Net.Interview\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Model\\obj\\",
+        "outputPath": "D:\\_Net.Interview\\final\\ExamQuiz\\UsabilityFactoryExamQuiz.Model\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Vladimir\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -106,8 +106,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\_Net.Interview\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Model.EF\\UsabilityFactoryExamQuiz.Model.EF.csproj": {
-                "projectPath": "D:\\_Net.Interview\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Model.EF\\UsabilityFactoryExamQuiz.Model.EF.csproj"
+              "D:\\_Net.Interview\\final\\ExamQuiz\\UsabilityFactoryExamQuiz.Model.EF\\UsabilityFactoryExamQuiz.Model.EF.csproj": {
+                "projectPath": "D:\\_Net.Interview\\final\\ExamQuiz\\UsabilityFactoryExamQuiz.Model.EF\\UsabilityFactoryExamQuiz.Model.EF.csproj"
               }
             }
           }
@@ -146,14 +146,14 @@
         }
       }
     },
-    "D:\\_Net.Interview\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Utils\\UsabilityFactoryExamQuiz.Utils.csproj": {
+    "D:\\_Net.Interview\\final\\ExamQuiz\\UsabilityFactoryExamQuiz.Utils\\UsabilityFactoryExamQuiz.Utils.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\_Net.Interview\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Utils\\UsabilityFactoryExamQuiz.Utils.csproj",
+        "projectUniqueName": "D:\\_Net.Interview\\final\\ExamQuiz\\UsabilityFactoryExamQuiz.Utils\\UsabilityFactoryExamQuiz.Utils.csproj",
         "projectName": "UsabilityFactoryExamQuiz.Utils",
-        "projectPath": "D:\\_Net.Interview\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Utils\\UsabilityFactoryExamQuiz.Utils.csproj",
+        "projectPath": "D:\\_Net.Interview\\final\\ExamQuiz\\UsabilityFactoryExamQuiz.Utils\\UsabilityFactoryExamQuiz.Utils.csproj",
         "packagesPath": "C:\\Users\\Vladimir\\.nuget\\packages\\",
-        "outputPath": "D:\\_Net.Interview\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Utils\\obj\\",
+        "outputPath": "D:\\_Net.Interview\\final\\ExamQuiz\\UsabilityFactoryExamQuiz.Utils\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Vladimir\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -170,11 +170,11 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\_Net.Interview\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Model.EF\\UsabilityFactoryExamQuiz.Model.EF.csproj": {
-                "projectPath": "D:\\_Net.Interview\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Model.EF\\UsabilityFactoryExamQuiz.Model.EF.csproj"
+              "D:\\_Net.Interview\\final\\ExamQuiz\\UsabilityFactoryExamQuiz.Model.EF\\UsabilityFactoryExamQuiz.Model.EF.csproj": {
+                "projectPath": "D:\\_Net.Interview\\final\\ExamQuiz\\UsabilityFactoryExamQuiz.Model.EF\\UsabilityFactoryExamQuiz.Model.EF.csproj"
               },
-              "D:\\_Net.Interview\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Model\\UsabilityFactoryExamQuiz.Model.csproj": {
-                "projectPath": "D:\\_Net.Interview\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Model\\UsabilityFactoryExamQuiz.Model.csproj"
+              "D:\\_Net.Interview\\final\\ExamQuiz\\UsabilityFactoryExamQuiz.Model\\UsabilityFactoryExamQuiz.Model.csproj": {
+                "projectPath": "D:\\_Net.Interview\\final\\ExamQuiz\\UsabilityFactoryExamQuiz.Model\\UsabilityFactoryExamQuiz.Model.csproj"
               }
             }
           }
@@ -221,14 +221,14 @@
         }
       }
     },
-    "D:\\_Net.Interview\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.WebSite\\UsabilityFactoryExamQuiz.WebSite.csproj": {
+    "D:\\_Net.Interview\\final\\ExamQuiz\\UsabilityFactoryExamQuiz.WebSite\\UsabilityFactoryExamQuiz.WebSite.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\_Net.Interview\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.WebSite\\UsabilityFactoryExamQuiz.WebSite.csproj",
+        "projectUniqueName": "D:\\_Net.Interview\\final\\ExamQuiz\\UsabilityFactoryExamQuiz.WebSite\\UsabilityFactoryExamQuiz.WebSite.csproj",
         "projectName": "UsabilityFactoryExamQuiz.WebSite",
-        "projectPath": "D:\\_Net.Interview\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.WebSite\\UsabilityFactoryExamQuiz.WebSite.csproj",
+        "projectPath": "D:\\_Net.Interview\\final\\ExamQuiz\\UsabilityFactoryExamQuiz.WebSite\\UsabilityFactoryExamQuiz.WebSite.csproj",
         "packagesPath": "C:\\Users\\Vladimir\\.nuget\\packages\\",
-        "outputPath": "D:\\_Net.Interview\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.WebSite\\obj\\",
+        "outputPath": "D:\\_Net.Interview\\final\\ExamQuiz\\UsabilityFactoryExamQuiz.WebSite\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Vladimir\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -245,14 +245,14 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\_Net.Interview\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Model.EF\\UsabilityFactoryExamQuiz.Model.EF.csproj": {
-                "projectPath": "D:\\_Net.Interview\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Model.EF\\UsabilityFactoryExamQuiz.Model.EF.csproj"
+              "D:\\_Net.Interview\\final\\ExamQuiz\\UsabilityFactoryExamQuiz.Model.EF\\UsabilityFactoryExamQuiz.Model.EF.csproj": {
+                "projectPath": "D:\\_Net.Interview\\final\\ExamQuiz\\UsabilityFactoryExamQuiz.Model.EF\\UsabilityFactoryExamQuiz.Model.EF.csproj"
               },
-              "D:\\_Net.Interview\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Model\\UsabilityFactoryExamQuiz.Model.csproj": {
-                "projectPath": "D:\\_Net.Interview\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Model\\UsabilityFactoryExamQuiz.Model.csproj"
+              "D:\\_Net.Interview\\final\\ExamQuiz\\UsabilityFactoryExamQuiz.Model\\UsabilityFactoryExamQuiz.Model.csproj": {
+                "projectPath": "D:\\_Net.Interview\\final\\ExamQuiz\\UsabilityFactoryExamQuiz.Model\\UsabilityFactoryExamQuiz.Model.csproj"
               },
-              "D:\\_Net.Interview\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Utils\\UsabilityFactoryExamQuiz.Utils.csproj": {
-                "projectPath": "D:\\_Net.Interview\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Utils\\UsabilityFactoryExamQuiz.Utils.csproj"
+              "D:\\_Net.Interview\\final\\ExamQuiz\\UsabilityFactoryExamQuiz.Utils\\UsabilityFactoryExamQuiz.Utils.csproj": {
+                "projectPath": "D:\\_Net.Interview\\final\\ExamQuiz\\UsabilityFactoryExamQuiz.Utils\\UsabilityFactoryExamQuiz.Utils.csproj"
               }
             }
           }

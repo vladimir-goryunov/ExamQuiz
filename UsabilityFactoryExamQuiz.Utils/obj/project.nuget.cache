@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ySWmgMZUYQzEbqa05xXuatx9xsbtDN1gNeUNI4ehp+ZbUCr+CRoLBMvrOlPHKDw5teP+h1JblGRmU2EEXTHOLw==",
+  "dgSpecHash": "jOijQasd6kUb/eMYqLTH9hlEaeI03CI86djiEanusIC6rOGcg2l/71eDe654nb8qvg/bZN0lyR3r4P8OMC6Lag==",
   "success": true,
-  "projectFilePath": "D:\\_Net.Interview\\git\\ExamQuiz\\UsabilityFactoryExamQuiz.Utils\\UsabilityFactoryExamQuiz.Utils.csproj",
+  "projectFilePath": "D:\\_Net.Interview\\final\\ExamQuiz\\UsabilityFactoryExamQuiz.Utils\\UsabilityFactoryExamQuiz.Utils.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Vladimir\\.nuget\\packages\\azure.core\\1.8.1\\azure.core.1.8.1.nupkg.sha512",
     "C:\\Users\\Vladimir\\.nuget\\packages\\azure.storage.blobs\\12.8.0\\azure.storage.blobs.12.8.0.nupkg.sha512",
